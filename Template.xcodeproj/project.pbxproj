@@ -16,6 +16,12 @@
 		A94CB8CB278FA48500AFFB98 /* TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8CA278FA48500AFFB98 /* TemplateTests.swift */; };
 		A94CB8D5278FA48500AFFB98 /* TemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8D4278FA48500AFFB98 /* TemplateUITests.swift */; };
 		A94CB8D7278FA48500AFFB98 /* TemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8D6278FA48500AFFB98 /* TemplateUITestsLaunchTests.swift */; };
+		A94CB8E4278FA53000AFFB98 /* Extensions+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8E3278FA53000AFFB98 /* Extensions+Color.swift */; };
+		A94CB8E6278FA63600AFFB98 /* SampleColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8E5278FA63600AFFB98 /* SampleColorView.swift */; };
+		A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E58278FB8BA005E4654 /* SampleButtonView.swift */; };
+		A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5A278FB92F005E4654 /* ButtonStyles.swift */; };
+		A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */; };
+		A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5E278FE5E1005E4654 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,12 @@
 		A94CB8D0278FA48500AFFB98 /* TemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94CB8D4278FA48500AFFB98 /* TemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateUITests.swift; sourceTree = "<group>"; };
 		A94CB8D6278FA48500AFFB98 /* TemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A94CB8E3278FA53000AFFB98 /* Extensions+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Color.swift"; sourceTree = "<group>"; };
+		A94CB8E5278FA63600AFFB98 /* SampleColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleColorView.swift; sourceTree = "<group>"; };
+		A9637E58278FB8BA005E4654 /* SampleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleButtonView.swift; sourceTree = "<group>"; };
+		A9637E5A278FB92F005E4654 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBadgeView.swift; sourceTree = "<group>"; };
+		A9637E5E278FE5E1005E4654 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +116,12 @@
 				A94CB8BD278FA48500AFFB98 /* Persistence.swift */,
 				A94CB8BF278FA48500AFFB98 /* Template.xcdatamodeld */,
 				A94CB8BA278FA48500AFFB98 /* Preview Content */,
+				A94CB8E3278FA53000AFFB98 /* Extensions+Color.swift */,
+				A9637E5E278FE5E1005E4654 /* Badge.swift */,
+				A9637E5A278FB92F005E4654 /* ButtonStyles.swift */,
+				A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */,
+				A94CB8E5278FA63600AFFB98 /* SampleColorView.swift */,
+				A9637E58278FB8BA005E4654 /* SampleButtonView.swift */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -265,8 +283,14 @@
 			files = (
 				A94CB8BE278FA48500AFFB98 /* Persistence.swift in Sources */,
 				A94CB8C1278FA48500AFFB98 /* Template.xcdatamodeld in Sources */,
+				A94CB8E6278FA63600AFFB98 /* SampleColorView.swift in Sources */,
 				A94CB8B7278FA48400AFFB98 /* ContentView.swift in Sources */,
+				A94CB8E4278FA53000AFFB98 /* Extensions+Color.swift in Sources */,
+				A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */,
+				A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */,
+				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
 				A94CB8B5278FA48400AFFB98 /* TemplateApp.swift in Sources */,
+				A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
