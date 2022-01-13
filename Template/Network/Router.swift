@@ -256,14 +256,15 @@ enum  Router :URLConvertible {
     
     var baseURL : String {
         
-        switch(AppConstant.environment) {
-        case .develop:
-            return AppConstant.developServerURL
-        case .stage:
-            return AppConstant.stageServerURL
-        case .release:
-            return AppConstant.serverURL
-        }
+        return "" 
+//        switch(AppConstant.environment) {
+//        case .develop:
+//            return AppConstant.developServerURL
+//        case .stage:
+//            return AppConstant.stageServerURL
+//        case .release:
+//            return AppConstant.serverURL
+//        }
         
     }
     var versionPath : String {
@@ -554,28 +555,29 @@ enum  Router :URLConvertible {
     var headers : HTTPHeaders? {
         
         //let accessToken = Config.shared.read(key: .accessToken, initStr: "")
-        let refreshToken = Config.shared.read(key: .refreshToken, initStr: "" )
-
-        let token : String
-        switch(self) {
-            case .refreshToken:
-                token = refreshToken.replacingOccurrences(of: "Bearer ", with: "")
-
-            default:
-                 token = ""  // AuthInterceptor 로 치환
-                
-        }
-        var header: HTTPHeaders? = nil
-        if   token != ""   {
-            header = [
-                .authorization(bearerToken:token )
-            ]
-            let deviceId = Config.shared.read(key: .deviceId, initStr: "")
-            if deviceId != "" {
-                header?.add(name: "device-id", value: deviceId )
-            }
-        }
-        return header
+//        let refreshToken = Config.shared.read(key: .refreshToken, initStr: "" )
+//
+//        let token : String
+//        switch(self) {
+//            case .refreshToken:
+//                token = refreshToken.replacingOccurrences(of: "Bearer ", with: "")
+//
+//            default:
+//                 token = ""  // AuthInterceptor 로 치환
+//
+//        }
+//        var header: HTTPHeaders? = nil
+//        if   token != ""   {
+//            header = [
+//                .authorization(bearerToken:token )
+//            ]
+//            let deviceId = Config.shared.read(key: .deviceId, initStr: "")
+//            if deviceId != "" {
+//                header?.add(name: "device-id", value: deviceId )
+//            }
+//        }
+//        return header
+        return nil
     }
     
     
@@ -652,11 +654,11 @@ enum  Router :URLConvertible {
             .responseDecodable(of:JSON.self ) { response in
                 
                 //Debug.log("arg:\(String(describing: parameters))")
-                Debug.log("request : \(String(describing: response.request))")
-                Debug.log("response : \(String(describing: response.response))")
-                Debug.log("result: \(response.result)")
-                Debug.log("data : \(String(describing: response.data))")
-                Debug.log("headers : \(String(describing: headers))")
+//                Debug.log("request : \(String(describing: response.request))")
+//                Debug.log("response : \(String(describing: response.response))")
+//                Debug.log("result: \(response.result)")
+//                Debug.log("data : \(String(describing: response.data))")
+//                Debug.log("headers : \(String(describing: headers))")
                 
                 
 //                userid :01000000000
@@ -669,7 +671,7 @@ enum  Router :URLConvertible {
                     if let error = data["error"].string  , !error.isEmpty {
                         let message = data["message"].string ?? ""
                         let errorDetails = data["errorDetails"]
-                        Debug.log(errorDetails)
+//                        Debug.log(errorDetails)
 
                         onCompletedHandler(nil, RequestError.requestError(message: message))
                         return
@@ -686,10 +688,10 @@ enum  Router :URLConvertible {
                     let expires = data["data"]["accessTokenExpiredAt"].int ?? 0
                     let expireRefresh = data["data"]["refreshTokenExpiredAt"].int ?? 0
                     
-                    Debug.log(refreshToken)
-                    Debug.log(accessToken)
-                    Debug.log(expires)
-                    Debug.log(expireRefresh)
+//                    Debug.log(refreshToken)
+//                    Debug.log(accessToken)
+//                    Debug.log(expires)
+//                    Debug.log(expireRefresh)
                     
                     guard refreshToken != "" , accessToken != "" else {
                         onCompletedHandler(nil, RequestError.requestNoSuccess)
@@ -697,11 +699,11 @@ enum  Router :URLConvertible {
                     }
 
 
-                    Config.shared.save(key: .accessToken, value: accessToken)
-                    Config.shared.save(key: .refreshToken, value: refreshToken)
-                   // Config.shared.save(key: .username, value: username)
-                    Config.shared.save(key: .tokenExpires, value: String(expires))
-                    Config.shared.save(key: .tokenRefreshExpires, value: String(expireRefresh))
+//                    Config.shared.save(key: .accessToken, value: accessToken)
+//                    Config.shared.save(key: .refreshToken, value: refreshToken)
+//                   // Config.shared.save(key: .username, value: username)
+//                    Config.shared.save(key: .tokenExpires, value: String(expires))
+//                    Config.shared.save(key: .tokenRefreshExpires, value: String(expireRefresh))
                     
                     onCompletedHandler(data , nil )
                     

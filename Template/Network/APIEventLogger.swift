@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+
 class APIEventLogger : EventMonitor {
     
    
@@ -18,32 +19,32 @@ class APIEventLogger : EventMonitor {
     func requestDidFinish(_ request: Alamofire.Request) {
         
         
-        guard AppConstant.environment != .release else {
-            return
-        }
-        
-        Debug.log("🛰 NETWORK Reqeust LOG")
-        Debug.log(request.description)
-        Debug.log("URL:" + (request.request?.url?.absoluteString ?? ""))
-        Debug.log("Method:" + (request.request?.httpMethod ?? ""))
-        Debug.log("headers:" + "\(request.request?.allHTTPHeaderFields ?? [:])")
-        Debug.log("Authorization: " + (request.request?.headers["Authorization"] ?? ""))
-        Debug.log("Body: " + (request.request?.httpBody?.toPrettyPrintedString ?? ""))
+//        guard AppConstant.environment != .release else {
+//            return
+//        }
+//
+//        Debug.log("🛰 NETWORK Reqeust LOG")
+//        Debug.log(request.description)
+//        Debug.log("URL:" + (request.request?.url?.absoluteString ?? ""))
+//        Debug.log("Method:" + (request.request?.httpMethod ?? ""))
+//        Debug.log("headers:" + "\(request.request?.allHTTPHeaderFields ?? [:])")
+//        Debug.log("Authorization: " + (request.request?.headers["Authorization"] ?? ""))
+//        Debug.log("Body: " + (request.request?.httpBody?.toPrettyPrintedString ?? ""))
         
     }
     
     
     func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
-        guard AppConstant.environment != .release else {
-            return
-        }
-        
-        Debug.log("🛰 NETWORK Response LOG")
-        
-        Debug.log("URL: " + (request.request?.url?.absoluteString ?? ""))
-        Debug.log("Result: " + "\(response.result)")
-        Debug.log("StatusCode: " + "\(response.response?.statusCode ?? 0)" )
-        Debug.log("Data: \(response.data?.toPrettyPrintedString ?? "")")
+//        guard AppConstant.environment != .release else {
+//            return
+//        }
+//        
+//        Debug.log("🛰 NETWORK Response LOG")
+//        
+//        Debug.log("URL: " + (request.request?.url?.absoluteString ?? ""))
+//        Debug.log("Result: " + "\(response.result)")
+//        Debug.log("StatusCode: " + "\(response.response?.statusCode ?? 0)" )
+//        Debug.log("Data: \(response.data?.toPrettyPrintedString ?? "")")
         
         
         

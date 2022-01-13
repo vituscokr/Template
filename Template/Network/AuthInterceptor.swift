@@ -21,8 +21,8 @@ class AuthInterceptor : RequestInterceptor {
         
         var urlRequest = urlRequest
         
-        let accessToken = Config.shared.read(key: .accessToken, initStr: "")
-        let deviceId = Config.shared.read(key: .deviceId, initStr: "")
+        let accessToken = Config.shared.read(.accessToken)
+        let deviceId = Config.shared.read(.deviceId)
         
         urlRequest.setValue("\(accessToken)", forHTTPHeaderField: "Authorization")
         urlRequest.setValue("\(deviceId)", forHTTPHeaderField: "device-id")
@@ -36,7 +36,7 @@ class AuthInterceptor : RequestInterceptor {
         }
         Router.refreshToken.refreshToken { data, error in
             if error != nil {
-                User.shared.logout()
+//                User.shared.logout()
                 completion(.doNotRetry)
             }else if request.retryCount < self.retryLimit {
                 completion(.retryWithDelay(self.retryDelay))

@@ -36,15 +36,15 @@ enum WebPages : URLConvertible {
     
     
     var baseURL : String {
-        
-        switch(AppConstant.environment) {
-        case .develop:
-            return AppConstant.developServerURL
-        case .stage:
-            return AppConstant.stageServerURL
-        case .release:
-            return AppConstant.serverURL
-        }
+        return ""
+//        switch(AppConstant.environment) {
+//        case .develop:
+//            return AppConstant.developServerURL
+//        case .stage:
+//            return AppConstant.stageServerURL
+//        case .release:
+//            return AppConstant.serverURL
+//        }
     }
     
     var path: String {
@@ -103,8 +103,8 @@ enum WebPages : URLConvertible {
         let urlString = baseURL + path
         guard let url = URL(string: urlString) else { return  nil }
         var urlRequest = URLRequest(url:url)
-        let accessToken = Config.shared.read(key: .accessToken, initStr: "")
-        urlRequest.addValue(accessToken, forHTTPHeaderField: "Authorization")
+//        let accessToken = Config.shared.read(key: .accessToken, initStr: "")
+//        urlRequest.addValue(accessToken, forHTTPHeaderField: "Authorization")
         
         return urlRequest
     }
