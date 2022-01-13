@@ -7,6 +7,7 @@
 
 import SwiftUI
 import RealmSwift
+import LSSLibrary
 
 struct SampleConfigView: View {
     @ObservedResults(RConfig.self) var configs
