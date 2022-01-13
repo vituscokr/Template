@@ -22,6 +22,14 @@
 		A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5A278FB92F005E4654 /* ButtonStyles.swift */; };
 		A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */; };
 		A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5E278FE5E1005E4654 /* Badge.swift */; };
+		A9637E66278FEF41005E4654 /* APIEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E61278FEF41005E4654 /* APIEventLogger.swift */; };
+		A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E62278FEF41005E4654 /* AuthInterceptor.swift */; };
+		A9637E68278FEF41005E4654 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E63278FEF41005E4654 /* APIManager.swift */; };
+		A9637E69278FEF41005E4654 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E64278FEF41005E4654 /* Router.swift */; };
+		A9637E6A278FEF41005E4654 /* WebPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E65278FEF41005E4654 /* WebPages.swift */; };
+		A9637E6D278FEF59005E4654 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A9637E6C278FEF59005E4654 /* Alamofire */; };
+		A9637E70278FEF67005E4654 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A9637E6F278FEF67005E4654 /* SwiftyJSON */; };
+		A9637E73278FEF85005E4654 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A9637E72278FEF85005E4654 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,11 @@
 		A9637E5A278FB92F005E4654 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBadgeView.swift; sourceTree = "<group>"; };
 		A9637E5E278FE5E1005E4654 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
+		A9637E61278FEF41005E4654 /* APIEventLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEventLogger.swift; sourceTree = "<group>"; };
+		A9637E62278FEF41005E4654 /* AuthInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		A9637E63278FEF41005E4654 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		A9637E64278FEF41005E4654 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A9637E65278FEF41005E4654 /* WebPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9637E73278FEF85005E4654 /* Kingfisher in Frameworks */,
+				A9637E70278FEF67005E4654 /* SwiftyJSON in Frameworks */,
+				A9637E6D278FEF59005E4654 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +126,7 @@
 		A94CB8B3278FA48400AFFB98 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				A9637E60278FEF2B005E4654 /* Network */,
 				A94CB8B4278FA48400AFFB98 /* TemplateApp.swift */,
 				A94CB8B6278FA48400AFFB98 /* ContentView.swift */,
 				A94CB8B8278FA48500AFFB98 /* Assets.xcassets */,
@@ -151,6 +168,18 @@
 			path = TemplateUITests;
 			sourceTree = "<group>";
 		};
+		A9637E60278FEF2B005E4654 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A9637E61278FEF41005E4654 /* APIEventLogger.swift */,
+				A9637E63278FEF41005E4654 /* APIManager.swift */,
+				A9637E62278FEF41005E4654 /* AuthInterceptor.swift */,
+				A9637E64278FEF41005E4654 /* Router.swift */,
+				A9637E65278FEF41005E4654 /* WebPages.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +196,11 @@
 			dependencies = (
 			);
 			name = Template;
+			packageProductDependencies = (
+				A9637E6C278FEF59005E4654 /* Alamofire */,
+				A9637E6F278FEF67005E4654 /* SwiftyJSON */,
+				A9637E72278FEF85005E4654 /* Kingfisher */,
+			);
 			productName = Template;
 			productReference = A94CB8B1278FA48400AFFB98 /* Template.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +273,11 @@
 				Base,
 			);
 			mainGroup = A94CB8A8278FA48400AFFB98;
+			packageReferences = (
+				A9637E6B278FEF59005E4654 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A9637E6E278FEF67005E4654 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				A9637E71278FEF85005E4654 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = A94CB8B2278FA48400AFFB98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9637E66278FEF41005E4654 /* APIEventLogger.swift in Sources */,
 				A94CB8BE278FA48500AFFB98 /* Persistence.swift in Sources */,
 				A94CB8C1278FA48500AFFB98 /* Template.xcdatamodeld in Sources */,
 				A94CB8E6278FA63600AFFB98 /* SampleColorView.swift in Sources */,
@@ -289,7 +329,11 @@
 				A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */,
 				A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */,
 				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
+				A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */,
+				A9637E69278FEF41005E4654 /* Router.swift in Sources */,
+				A9637E68278FEF41005E4654 /* APIManager.swift in Sources */,
 				A94CB8B5278FA48400AFFB98 /* TemplateApp.swift in Sources */,
+				A9637E6A278FEF41005E4654 /* WebPages.swift in Sources */,
 				A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -617,6 +661,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9637E6B278FEF59005E4654 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A9637E6E278FEF67005E4654 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A9637E71278FEF85005E4654 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9637E6C278FEF59005E4654 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9637E6B278FEF59005E4654 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A9637E6F278FEF67005E4654 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9637E6E278FEF67005E4654 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		A9637E72278FEF85005E4654 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9637E71278FEF85005E4654 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A94CB8BF278FA48500AFFB98 /* Template.xcdatamodeld */ = {
