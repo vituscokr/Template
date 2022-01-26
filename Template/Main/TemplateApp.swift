@@ -13,7 +13,8 @@ struct TemplateApp: App {
 
     var body: some Scene {
         WindowGroup {
-            SampleConfigView()
+            SampleGalleryView() 
+//            SampleConfigView()
             
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
