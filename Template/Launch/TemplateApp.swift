@@ -25,8 +25,10 @@ struct TemplateApp: App {
                         Debug.log("inactive")
                     case .background:
                         Debug.log("background")
+                        appDelegate.scheduleBackground()
                     @unknown default:
                         Debug.log("unknown")
+                        
                     }
                 }
 
