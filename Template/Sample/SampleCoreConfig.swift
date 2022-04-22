@@ -8,7 +8,7 @@
 import SwiftUI
 
 import LSSLibrary
-
+/*
 struct SampleConfigView: View {
     @ObservedResults(RConfig.self) var configs
     var body: some View {
@@ -43,3 +43,4 @@ struct SampleCoreConfigView_Previews: PreviewProvider {
         SampleConfigView()
     }
 }
+*/

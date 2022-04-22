@@ -21,26 +21,26 @@ class AuthInterceptor : RequestInterceptor {
         
         var urlRequest = urlRequest
         
-        let accessToken = Config.shared.read(.accessToken)
-        let deviceId = Config.shared.read(.deviceId)
+//        let accessToken = Config.shared.read(.accessToken)
+//        let deviceId = Config.shared.read(.deviceId)
         
-        urlRequest.setValue("\(accessToken)", forHTTPHeaderField: "Authorization")
-        urlRequest.setValue("\(deviceId)", forHTTPHeaderField: "device-id")
+//        urlRequest.setValue("\(accessToken)", forHTTPHeaderField: "Authorization")
+//        urlRequest.setValue("\(deviceId)", forHTTPHeaderField: "device-id")
         completion(.success(urlRequest))
     }
     
     func retry(_ request: Alamofire.Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
-        let statusCode = request.response?.statusCode
-        guard  statusCode == 401  else{
-            return completion(.doNotRetry)
-        }
-        Router.refreshToken.refreshToken { data, error in
-            if error != nil {
-//                User.shared.logout()
-                completion(.doNotRetry)
-            }else if request.retryCount < self.retryLimit {
-                completion(.retryWithDelay(self.retryDelay))
-            }
-        }
+//        let statusCode = request.response?.statusCode
+//        guard  statusCode == 401  else{
+//            return completion(.doNotRetry)
+//        }
+//        Router.refreshToken.refreshToken { data, error in
+//            if error != nil {
+////                User.shared.logout()
+//                completion(.doNotRetry)
+//            }else if request.retryCount < self.retryLimit {
+//                completion(.retryWithDelay(self.retryDelay))
+//            }
+//        }
     }
 }

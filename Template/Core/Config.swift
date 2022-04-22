@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+/*
 import Realm
 
 class RConfig :Object ,ObjectKeyIdentifiable{
@@ -79,3 +80,4 @@ class Config {
     
 }
 
+*/

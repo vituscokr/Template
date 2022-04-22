@@ -10,7 +10,25 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing:0) {
+            NavigationLink {
+                TestSimpleWebView()
+            }label : {
+                Text("SimpleWebView")
+            }
+            
+            NavigationLink {
+                TestLottieView() 
+            }label : {
+                Text("LottieView")
+            }
+            
+            //            SampleGalleryView()
+            //            SampleConfigView()
+                        
+            //            ContentView()
+            //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        }
 
     }
 }
