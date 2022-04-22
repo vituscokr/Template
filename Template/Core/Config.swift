@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import RealmSwift
+import SwiftUI
+import Realm
 
 class RConfig :Object ,ObjectKeyIdentifiable{
     @Persisted (primaryKey: true) var key = ""
@@ -77,3 +78,4 @@ class Config {
     }
     
 }
+

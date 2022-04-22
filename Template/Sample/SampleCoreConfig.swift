@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import RealmSwift
+
 import LSSLibrary
 
 struct SampleConfigView: View {

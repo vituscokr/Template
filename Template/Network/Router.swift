@@ -252,8 +252,18 @@ enum  Router :URLConvertible {
     ///공통 - 계정(폰번호) 변경
     case patchPhoneNumber
     
-
+    //####################################//
+    //##           v2                   ##//
+    //####################################//
     
+    ///주소가 서비스 지역그룹에 속해 있는지 확인
+    case getAddressCheck
+    ///새로운 주소 등록
+    case postAddress
+    /// 주소 삭제
+    case deleteAddress(String)
+    ///주소목록
+    case getAddress
     
     var baseURL : String {
         
@@ -270,7 +280,18 @@ enum  Router :URLConvertible {
     }
     var versionPath : String {
         
-        return "/v1"
+        switch(self) {
+        case .getAddressCheck,
+                .postAddress,
+                .deleteAddress,
+                .getAddress:
+            return "/v2"
+            
+            default:
+        
+                return "/v1"
+        }
+
     }
     var path : String {
         switch(self) {
@@ -413,6 +434,11 @@ enum  Router :URLConvertible {
             case .getConsultation:                      return "/customer/consultations"
             case .patchPhoneNumber:                     return "/common/person-id"
             
+            //v2
+            case .getAddressCheck:                      return "/address/check-service-area"
+            case .postAddress:                          return "/address"
+            case .deleteAddress(let id):                return "/address/\(id)"
+            case .getAddress:                           return "/address"
             
             
         }
@@ -547,6 +573,12 @@ enum  Router :URLConvertible {
             case .getCheckServiceArea:                  return .get
             case .getBankList:                          return .get
             case .getSeriveAreaDetail(_):               return .get
+            
+            //v2
+            case .getAddressCheck:                      return .get
+            case .postAddress:                          return .post
+            case .deleteAddress(_):                     return .delete
+            case .getAddress:                           return .get
         }
         
     }
@@ -700,11 +732,11 @@ enum  Router :URLConvertible {
                     }
 
 
-//                    Config.shared.save(key: .accessToken, value: accessToken)
-//                    Config.shared.save(key: .refreshToken, value: refreshToken)
-//                   // Config.shared.save(key: .username, value: username)
-//                    Config.shared.save(key: .tokenExpires, value: String(expires))
-//                    Config.shared.save(key: .tokenRefreshExpires, value: String(expireRefresh))
+                    Config.shared.save(key: .accessToken, value: accessToken)
+                    Config.shared.save(key: .refreshToken, value: refreshToken)
+                   // Config.shared.save(key: .username, value: username)
+                    Config.shared.save(key: .tokenExpires, value: String(expires))
+                    Config.shared.save(key: .tokenRefreshExpires, value: String(expireRefresh))
                     
                     onCompletedHandler(data , nil )
                     
