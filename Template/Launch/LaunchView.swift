@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct LaunchView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @StateObject var launchModel : LaunchModel = LaunchModel()
     var body: some View {
         NavigationView {
             MainView()
+                .environment(\.managedObjectContext, viewContext)
         }
     }
 }

@@ -17,9 +17,11 @@ class ConfigStorage : NSObject , ObservableObject {
     static let shared : ConfigStorage = ConfigStorage()
     private let fetchController : NSFetchedResultsController<Config>
     
-    
+    private var viewContext :NSManagedObjectContext {
+        return PersistenceController.shared.container.viewContext
+    }
     private override init() {
-        
+
         let fetchRequest: NSFetchRequest<Config> = Config.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "key", ascending: true)]
         
@@ -40,16 +42,72 @@ class ConfigStorage : NSObject , ObservableObject {
             Debug.log("Error : could not fetch objets ")
         }
     }
+    func read(key : String ) -> String {
+        let objects = fetchController.fetchedObjects?.filter{
+            $0.key == key
+        }
+        guard let object  = objects?.first else {
+            return ""
+        }
+        
+        
+        return object.wrappedValue
+        
+    }
+    func add(key:String, value:String ) {
+        let viewContext = fetchController.managedObjectContext
+        
+        let config = Config(context: viewContext)
+        config.key = key
+        config.value = value
+        do {
+            try viewContext.save()
+        }catch {
+            print(error.localizedDescription)
+            
+        }
+    }
     
-    func add() {
+    func upate(key: String, value:String)  {
+        let viewContext = fetchController.managedObjectContext
+
+        let objects = fetchController.fetchedObjects?.filter{
+            $0.key == key
+        }
+        
+        guard let object  = objects?.first else {
+            return
+        }
+        
+        object.value = value
+        do {
+            try viewContext.save()
+        }catch {
+            print(error.localizedDescription)
+            
+        }
         
     }
     
-    func upate() {
+    func delete(key:String ) {
         
-    }
-    
-    func delete() {
+        let viewContext = fetchController.managedObjectContext
+
+        let objects = fetchController.fetchedObjects?.filter{
+            $0.key == key
+        }
+        guard let array  = objects else {
+            return
+        }
+        for obj in array {
+            viewContext.delete(obj)
+        }
+        do {
+            try viewContext.save()
+        }catch {
+            Debug.log(error.localizedDescription)
+        }
+
         
     }
 }

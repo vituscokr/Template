@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
     var body: some View {
         
         VStack(spacing:0) {
@@ -22,6 +25,22 @@ struct MainView: View {
             }label : {
                 Text("LottieView")
             }
+            
+            
+            NavigationLink {
+                CountryListView()
+                    .environment(\.managedObjectContext, viewContext)
+            }label: {
+                Text("CoreData")
+            }
+            
+            
+            NavigationLink {
+                ConfigView() 
+            }label: {
+                Text("Config")
+            }
+            
             
             //            SampleGalleryView()
             //            SampleConfigView()

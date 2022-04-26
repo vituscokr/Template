@@ -16,9 +16,7 @@ class ConfigModel : ObservableObject {
     init(itemsPublisher : AnyPublisher<[Config], Never> = ConfigStorage.shared.items.eraseToAnyPublisher()) {
 
         cancellable = itemsPublisher.sink { items in
-            Debug.log("init config")
-            //self.items = items
-
+            self.items = items 
         }
 
     }

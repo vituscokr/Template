@@ -59,6 +59,14 @@
 		A9637E86278FFA0E005E4654 /* SampleCoreConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E85278FFA0E005E4654 /* SampleCoreConfig.swift */; };
 		A9637E8B279001EE005E4654 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E8A279001EE005E4654 /* Config.swift */; };
 		A9637E8D27900201005E4654 /* ConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E8C27900201005E4654 /* ConfigKey.swift */; };
+		A96D32E528177542004E9CCE /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E128177542004E9CCE /* Country+CoreDataClass.swift */; };
+		A96D32E628177542004E9CCE /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E228177542004E9CCE /* Country+CoreDataProperties.swift */; };
+		A96D32E728177542004E9CCE /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E328177542004E9CCE /* Candy+CoreDataClass.swift */; };
+		A96D32E828177542004E9CCE /* Candy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E428177542004E9CCE /* Candy+CoreDataProperties.swift */; };
+		A96D32EA28177592004E9CCE /* CoreData+README.md in Resources */ = {isa = PBXBuildFile; fileRef = A96D32E928177592004E9CCE /* CoreData+README.md */; };
+		A96D32ED28177D2C004E9CCE /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EC28177D2C004E9CCE /* CountryListView.swift */; };
+		A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */; };
+		A96D32F128178B61004E9CCE /* Config+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */; };
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -133,6 +141,14 @@
 		A9637E85278FFA0E005E4654 /* SampleCoreConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCoreConfig.swift; sourceTree = "<group>"; };
 		A9637E8A279001EE005E4654 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A9637E8C27900201005E4654 /* ConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKey.swift; sourceTree = "<group>"; };
+		A96D32E128177542004E9CCE /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A96D32E228177542004E9CCE /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A96D32E328177542004E9CCE /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A96D32E428177542004E9CCE /* Candy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A96D32E928177592004E9CCE /* CoreData+README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CoreData+README.md"; sourceTree = "<group>"; };
+		A96D32EC28177D2C004E9CCE /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +267,7 @@
 		A94CB8B3278FA48400AFFB98 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				A96D32EB28177792004E9CCE /* CoreData */,
 				732D822E28127A3400EFF407 /* Info.plist */,
 				732D8227281278E900EFF407 /* TestUI */,
 				732D8222281276BD00EFF407 /* Launch */,
@@ -350,6 +367,29 @@
 				A98EE0D627A126B0006C070F /* SampleGalleryView.swift */,
 			);
 			path = Sample;
+			sourceTree = "<group>";
+		};
+		A96D32E02817752C004E9CCE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */,
+				A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */,
+				A96D32E128177542004E9CCE /* Country+CoreDataClass.swift */,
+				A96D32E228177542004E9CCE /* Country+CoreDataProperties.swift */,
+				A96D32E328177542004E9CCE /* Candy+CoreDataClass.swift */,
+				A96D32E428177542004E9CCE /* Candy+CoreDataProperties.swift */,
+				A96D32EC28177D2C004E9CCE /* CountryListView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A96D32EB28177792004E9CCE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A96D32E928177592004E9CCE /* CoreData+README.md */,
+				A96D32E02817752C004E9CCE /* Models */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +505,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A96D32EA28177592004E9CCE /* CoreData+README.md in Resources */,
 				732D822D2812794900EFF407 /* spinner.json in Resources */,
 				732D823028127BA600EFF407 /* REAME.md in Resources */,
 				732D823528127FFC00EFF407 /* README.md in Resources */,
@@ -503,6 +544,7 @@
 				732D82292812790000EFF407 /* TestSimpleWebView.swift in Sources */,
 				A9637E76278FEFF9005E4654 /* BoardType.swift in Sources */,
 				A94CB8B7278FA48400AFFB98 /* ContentView.swift in Sources */,
+				A96D32E828177542004E9CCE /* Candy+CoreDataProperties.swift in Sources */,
 				A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */,
 				A9637E7A278FF117005E4654 /* BoardModel.swift in Sources */,
 				A94122CE280FF4F20025F8D4 /* Book.swift in Sources */,
@@ -515,17 +557,21 @@
 				A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */,
 				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
 				A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */,
+				A96D32E528177542004E9CCE /* Country+CoreDataClass.swift in Sources */,
 				A9637E86278FFA0E005E4654 /* SampleCoreConfig.swift in Sources */,
 				732D823228127F8600EFF407 /* MyImageView.swift in Sources */,
 				A9637E83278FF9F1005E4654 /* MainView.swift in Sources */,
 				A9637E8B279001EE005E4654 /* Config.swift in Sources */,
+				A96D32E728177542004E9CCE /* Candy+CoreDataClass.swift in Sources */,
 				A94122CA280FF4DE0025F8D4 /* BookView.swift in Sources */,
 				A9637E69278FEF41005E4654 /* Router.swift in Sources */,
+				A96D32E628177542004E9CCE /* Country+CoreDataProperties.swift in Sources */,
 				732D823B281281B900EFF407 /* ConcurrencyView.swift in Sources */,
 				732D82372812801800EFF407 /* ConcurrencyModel.swift in Sources */,
 				A9637E68278FEF41005E4654 /* APIManager.swift in Sources */,
 				732D82262812773800EFF407 /* LaunchModel.swift in Sources */,
 				A9637E8D27900201005E4654 /* ConfigKey.swift in Sources */,
+				A96D32ED28177D2C004E9CCE /* CountryListView.swift in Sources */,
 				A94CB8B5278FA48400AFFB98 /* TemplateApp.swift in Sources */,
 				A9637E6A278FEF41005E4654 /* WebPages.swift in Sources */,
 				A94122D0280FF60F0025F8D4 /* BookContainerView.swift in Sources */,
@@ -535,7 +581,9 @@
 				A94122CC280FF4E90025F8D4 /* BookEditView.swift in Sources */,
 				A938B3332790F3D600B43CD5 /* TextModifer.swift in Sources */,
 				732D822B2812790D00EFF407 /* TestLottieView.swift in Sources */,
+				A96D32F128178B61004E9CCE /* Config+CoreDataProperties.swift in Sources */,
 				732D82402812820600EFF407 /* ConfigModel.swift in Sources */,
+				A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
