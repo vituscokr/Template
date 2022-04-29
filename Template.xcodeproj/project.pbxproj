@@ -70,6 +70,8 @@
 		A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */; };
 		A96D32F128178B61004E9CCE /* Config+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */; };
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
+		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
+		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +156,8 @@
 		A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
+		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,12 +202,14 @@
 		732D8227281278E900EFF407 /* TestUI */ = {
 			isa = PBXGroup;
 			children = (
+				A9C033DC281BB60E0028D8C0 /* GraphView.swift */,
 				732D823C281281E200EFF407 /* Config */,
 				732D823328127FCF00EFF407 /* Concurrency */,
 				732D82282812790000EFF407 /* TestSimpleWebView.swift */,
 				732D822C2812794900EFF407 /* spinner.json */,
 				732D822A2812790D00EFF407 /* TestLottieView.swift */,
 				A96C7D9F281BA0B900968949 /* TestArchiveView.swift */,
+				A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -557,9 +563,11 @@
 				A94CB8E4278FA53000AFFB98 /* Extensions+Color.swift in Sources */,
 				A938B3372790FE1300B43CD5 /* AppDelegate.swift in Sources */,
 				732D8239281280AA00EFF407 /* AppConstant.swift in Sources */,
+				A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */,
 				A9637E78278FF0C8005E4654 /* BoardListView.swift in Sources */,
 				A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */,
 				A938B3352790F9F100B43CD5 /* SampleTextView.swift in Sources */,
+				A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */,
 				A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */,
 				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
 				A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */,

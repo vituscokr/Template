@@ -48,7 +48,11 @@ struct MainView: View {
                 Text("TEST Archive")
             }
             
-            
+            NavigationLink {
+               TestGraphView()
+            }label: {
+                Text("TEST GraphView")
+            }
             
             
             //            SampleGalleryView()
