@@ -72,6 +72,7 @@
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
+		A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,7 @@
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
+		A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLSSButtonStyleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				732D822A2812790D00EFF407 /* TestLottieView.swift */,
 				A96C7D9F281BA0B900968949 /* TestArchiveView.swift */,
 				A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */,
+				A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				732D82402812820600EFF407 /* ConfigModel.swift in Sources */,
 				A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */,
 				A96C7DA0281BA0B900968949 /* TestArchiveView.swift in Sources */,
+				A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
