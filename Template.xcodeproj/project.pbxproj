@@ -59,6 +59,8 @@
 		A9637E86278FFA0E005E4654 /* SampleCoreConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E85278FFA0E005E4654 /* SampleCoreConfig.swift */; };
 		A9637E8B279001EE005E4654 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E8A279001EE005E4654 /* Config.swift */; };
 		A9637E8D27900201005E4654 /* ConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E8C27900201005E4654 /* ConfigKey.swift */; };
+		A96C7D9E281BA00900968949 /* BarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C7D9D281BA00900968949 /* BarcodeView.swift */; };
+		A96C7DA0281BA0B900968949 /* TestArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96C7D9F281BA0B900968949 /* TestArchiveView.swift */; };
 		A96D32E528177542004E9CCE /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E128177542004E9CCE /* Country+CoreDataClass.swift */; };
 		A96D32E628177542004E9CCE /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E228177542004E9CCE /* Country+CoreDataProperties.swift */; };
 		A96D32E728177542004E9CCE /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32E328177542004E9CCE /* Candy+CoreDataClass.swift */; };
@@ -141,6 +143,8 @@
 		A9637E85278FFA0E005E4654 /* SampleCoreConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCoreConfig.swift; sourceTree = "<group>"; };
 		A9637E8A279001EE005E4654 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A9637E8C27900201005E4654 /* ConfigKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKey.swift; sourceTree = "<group>"; };
+		A96C7D9D281BA00900968949 /* BarcodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeView.swift; sourceTree = "<group>"; };
+		A96C7D9F281BA0B900968949 /* TestArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestArchiveView.swift; sourceTree = "<group>"; };
 		A96D32E128177542004E9CCE /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A96D32E228177542004E9CCE /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A96D32E328177542004E9CCE /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				732D82282812790000EFF407 /* TestSimpleWebView.swift */,
 				732D822C2812794900EFF407 /* spinner.json */,
 				732D822A2812790D00EFF407 /* TestLottieView.swift */,
+				A96C7D9F281BA0B900968949 /* TestArchiveView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 		A94CB8B3278FA48400AFFB98 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				A96C7D9D281BA00900968949 /* BarcodeView.swift */,
 				A96D32EB28177792004E9CCE /* CoreData */,
 				732D822E28127A3400EFF407 /* Info.plist */,
 				732D8227281278E900EFF407 /* TestUI */,
@@ -566,6 +572,7 @@
 				A94122CA280FF4DE0025F8D4 /* BookView.swift in Sources */,
 				A9637E69278FEF41005E4654 /* Router.swift in Sources */,
 				A96D32E628177542004E9CCE /* Country+CoreDataProperties.swift in Sources */,
+				A96C7D9E281BA00900968949 /* BarcodeView.swift in Sources */,
 				732D823B281281B900EFF407 /* ConcurrencyView.swift in Sources */,
 				732D82372812801800EFF407 /* ConcurrencyModel.swift in Sources */,
 				A9637E68278FEF41005E4654 /* APIManager.swift in Sources */,
@@ -584,6 +591,7 @@
 				A96D32F128178B61004E9CCE /* Config+CoreDataProperties.swift in Sources */,
 				732D82402812820600EFF407 /* ConfigModel.swift in Sources */,
 				A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */,
+				A96C7DA0281BA0B900968949 /* TestArchiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,6 +42,15 @@ struct MainView: View {
             }
             
             
+            NavigationLink {
+                TestArchiveView()
+            }label: {
+                Text("TEST Archive")
+            }
+            
+            
+            
+            
             //            SampleGalleryView()
             //            SampleConfigView()
                         
