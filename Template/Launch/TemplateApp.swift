@@ -16,22 +16,25 @@ struct TemplateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LaunchView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .onChange(of: scenePhase) { phase in
-                    switch(phase) {
-                    case .active:
-                        Debug.log("active")
-                    case .inactive:
-                        Debug.log("inactive")
-                    case .background:
-                        Debug.log("background")
-                        appDelegate.scheduleBackground()
-                    @unknown default:
-                        Debug.log("unknown")
-                        
-                    }
-                }
+            
+            TestMyFileView()
+            
+//            LaunchView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+//                .onChange(of: scenePhase) { phase in
+//                    switch(phase) {
+//                    case .active:
+//                        Debug.log("active")
+//                    case .inactive:
+//                        Debug.log("inactive")
+//                    case .background:
+//                        Debug.log("background")
+//                        appDelegate.scheduleBackground()
+//                    @unknown default:
+//                        Debug.log("unknown")
+//
+//                    }
+//                }
 
         }
     }

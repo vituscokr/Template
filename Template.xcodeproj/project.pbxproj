@@ -41,6 +41,7 @@
 		A94CB8D7278FA48500AFFB98 /* TemplateUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8D6278FA48500AFFB98 /* TemplateUITestsLaunchTests.swift */; };
 		A94CB8E4278FA53000AFFB98 /* Extensions+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8E3278FA53000AFFB98 /* Extensions+Color.swift */; };
 		A94CB8E6278FA63600AFFB98 /* SampleColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8E5278FA63600AFFB98 /* SampleColorView.swift */; };
+		A95B3C66281FAFC400FAA802 /* TestMyFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95B3C65281FAFC400FAA802 /* TestMyFileView.swift */; };
 		A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E58278FB8BA005E4654 /* SampleButtonView.swift */; };
 		A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5A278FB92F005E4654 /* ButtonStyles.swift */; };
 		A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */; };
@@ -129,6 +130,7 @@
 		A94CB8D6278FA48500AFFB98 /* TemplateUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A94CB8E3278FA53000AFFB98 /* Extensions+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Color.swift"; sourceTree = "<group>"; };
 		A94CB8E5278FA63600AFFB98 /* SampleColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleColorView.swift; sourceTree = "<group>"; };
+		A95B3C65281FAFC400FAA802 /* TestMyFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMyFileView.swift; sourceTree = "<group>"; };
 		A9637E58278FB8BA005E4654 /* SampleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleButtonView.swift; sourceTree = "<group>"; };
 		A9637E5A278FB92F005E4654 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		A9637E5C278FE2A5005E4654 /* SampleBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleBadgeView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				A96C7D9F281BA0B900968949 /* TestArchiveView.swift */,
 				A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */,
 				A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */,
+				A95B3C65281FAFC400FAA802 /* TestMyFileView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				732D82372812801800EFF407 /* ConcurrencyModel.swift in Sources */,
 				A9637E68278FEF41005E4654 /* APIManager.swift in Sources */,
 				732D82262812773800EFF407 /* LaunchModel.swift in Sources */,
+				A95B3C66281FAFC400FAA802 /* TestMyFileView.swift in Sources */,
 				A9637E8D27900201005E4654 /* ConfigKey.swift in Sources */,
 				A96D32ED28177D2C004E9CCE /* CountryListView.swift in Sources */,
 				A94CB8B5278FA48400AFFB98 /* TemplateApp.swift in Sources */,
