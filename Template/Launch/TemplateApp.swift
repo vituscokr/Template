@@ -16,8 +16,10 @@ struct TemplateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            
-            TestMyFileView()
+            NavigationView  {
+                TestPhotoPickerView()
+            }
+            //TestMyFileView()
             
 //            LaunchView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
