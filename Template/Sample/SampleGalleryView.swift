@@ -24,7 +24,8 @@ class GalleryModel : ObservableObject {
         
         fetchOptions.fetchLimit = 0
         fetchOptions.includeHiddenAssets = true
-        
+//        fetchOptions.
+//        
         self.collection = PHAsset.fetchAssets(with: fetchOptions)
         images.removeAll()
         

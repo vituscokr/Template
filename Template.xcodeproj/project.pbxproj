@@ -71,6 +71,7 @@
 		A96D32ED28177D2C004E9CCE /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EC28177D2C004E9CCE /* CountryListView.swift */; };
 		A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */; };
 		A96D32F128178B61004E9CCE /* Config+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */; };
+		A98C555E2820CFC4003072A5 /* TestPhotoPickerStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C555D2820CFC4003072A5 /* TestPhotoPickerStartView.swift */; };
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
@@ -160,6 +161,7 @@
 		A96D32EC28177D2C004E9CCE /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
 		A96D32EE28178B61004E9CCE /* Config+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A96D32EF28178B61004E9CCE /* Config+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Config+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A98C555D2820CFC4003072A5 /* TestPhotoPickerStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPhotoPickerStartView.swift; sourceTree = "<group>"; };
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */,
 				A95B3C65281FAFC400FAA802 /* TestMyFileView.swift */,
 				A95B3C6A281FBB9F00FAA802 /* TestPhotoPickerView.swift */,
+				A98C555D2820CFC4003072A5 /* TestPhotoPickerStartView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				732D82422812821400EFF407 /* ConfigStorage.swift in Sources */,
 				732D8224281276F500EFF407 /* LaunchView.swift in Sources */,
 				A94CB8BE278FA48500AFFB98 /* Persistence.swift in Sources */,
+				A98C555E2820CFC4003072A5 /* TestPhotoPickerStartView.swift in Sources */,
 				A94CB8C1278FA48500AFFB98 /* Template.xcdatamodeld in Sources */,
 				A94CB8E6278FA63600AFFB98 /* SampleColorView.swift in Sources */,
 				732D82292812790000EFF407 /* TestSimpleWebView.swift in Sources */,
@@ -784,8 +788,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Template/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "미디어 앨범 사용";
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "녹음기 사용";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앨범 추가 사용 ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범 사용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -818,8 +824,10 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Template/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "미디어 앨범 사용";
 				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 사용";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "녹음기 사용";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "앨범 추가 사용 ";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "앨범 사용";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

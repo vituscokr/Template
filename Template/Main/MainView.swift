@@ -54,7 +54,11 @@ struct MainView: View {
                 Text("TEST GraphView")
             }
             
-            
+            NavigationLink {
+                TestPhotoPickerStartView()
+            }label: {
+                Text("TEST PhotoPickerView")
+            }
             //            SampleGalleryView()
             //            SampleConfigView()
                         
