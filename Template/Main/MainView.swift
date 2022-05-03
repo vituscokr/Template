@@ -59,6 +59,17 @@ struct MainView: View {
             }label: {
                 Text("TEST PhotoPickerView")
             }
+            
+            
+            Text("This is Test 18")
+                .applyFont(font: .bold18)
+            
+            Text("This is Test 18")
+                .applyFont(font: .regular18)
+            
+            
+            Text("This is test 18")
+                .applyFont(font: .bold18, underlined: true)
             //            SampleGalleryView()
             //            SampleConfigView()
                         

@@ -14,6 +14,17 @@ struct TestPhotoPickerStartView: View {
     @StateObject var model : PhotoModel = PhotoModel.shared
     
     
+    func getDuration(item:LSSFile) -> String {
+        
+        let url = URL(fileURLWithPath: item.url)
+        
+        let player = AVPlayer(url: url)
+        
+        return player.duration
+        
+        
+    }
+    
     
     var body: some View {
         
@@ -26,6 +37,9 @@ struct TestPhotoPickerStartView: View {
                         showController: true)
                    //.transition(.move(edge: .bottom))
                     .frame(width: 200, height: 200, alignment: .center)
+                    
+                    Text( getDuration(item:item) )
+                    
                 }else {
                     AsyncImage(url: URL(fileURLWithPath: item.url )){ phase in
                         switch(phase) {
