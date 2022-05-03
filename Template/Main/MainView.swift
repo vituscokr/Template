@@ -13,79 +13,90 @@ struct MainView: View {
     
     var body: some View {
         
-        VStack(spacing:0) {
-            NavigationLink {
-                TestSimpleWebView()
-            }label : {
-                Text("SimpleWebView")
-            }
-            
-            NavigationLink {
-                TestLottieView() 
-            }label : {
-                Text("LottieView")
-            }
-            
-            
-            NavigationLink {
-                CountryListView()
-                    .environment(\.managedObjectContext, viewContext)
-            }label: {
-                Text("CoreData")
-            }
-            
-            
-            NavigationLink {
-                ConfigView() 
-            }label: {
-                Text("Config")
-            }
-            
-            
-            NavigationLink {
-                TestArchiveView()
-            }label: {
-                Text("TEST Archive")
-            }
-            
-            NavigationLink {
-               TestGraphView()
-            }label: {
-                Text("TEST GraphView")
-            }
-            
-            NavigationLink {
-                TestPhotoPickerStartView()
-            }label: {
-                Text("TEST PhotoPickerView")
-            }
-            
-            
-            NavigationLink {
-                TestCalendarView()
-            }label: {
-                Text("TEST CalendarView")
-            }
-            
-            
-            
-            
-            Text("This is Test 18")
-                .applyFont(font: .bold18)
-            
-            Text("This is Test 18")
-                .applyFont(font: .regular18)
-            
-//            
-//            Text("This is test 18")
-//                .applyFont(font: .bold18, underlined: true)
-            //            SampleGalleryView()
-            //            SampleConfigView()
-                        
-            //            ContentView()
-            //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+        ScrollView {
+            VStack(spacing:0) {
+//                NavigationLink {
+//                    TestSimpleWebView()
+//                }label : {
+//                    Text("SimpleWebView")
+//                }
+//
+//                NavigationLink {
+//                    TestLottieView()
+//                }label : {
+//                    Text("LottieView")
+//                }
+//
+//
+//                NavigationLink {
+//                    CountryListView()
+//                        .environment(\.managedObjectContext, viewContext)
+//                }label: {
+//                    Text("CoreData")
+//                }
+//
+//
+//                NavigationLink {
+//                    ConfigView()
+//                }label: {
+//                    Text("Config")
+//                }
+//
+//
+//                NavigationLink {
+//                    TestArchiveView()
+//                }label: {
+//                    Text("TEST Archive")
+//                }
+//
+//                NavigationLink {
+//                    TestGraphView()
+//                }label: {
+//                    Text("TEST GraphView")
+//                }
+//
+//                NavigationLink {
+//                    TestPhotoPickerStartView()
+//                }label: {
+//                    Text("TEST PhotoPickerView")
+//                }
+//
+//
+//                NavigationLink {
+//                    TestCalendarView()
+//                }label: {
+//                    Text("TEST CalendarView")
+//                }
+//
+                
+                
 
+                
+                NavigationLink(destination: {
+                    TestSlideMenuView()
+                }, label: {
+                    Text("SliderMenuView" )
+                })
+                
+                
+                
+                Text("This is Test 18")
+                    .applyFont(font: .bold18)
+                
+                Text("This is Test 18")
+                    .applyFont(font: .regular18)
+                
+                //
+                //            Text("This is test 18")
+                //                .applyFont(font: .bold18, underlined: true)
+                //            SampleGalleryView()
+                //            SampleConfigView()
+                
+                //            ContentView()
+                //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
+        }
+        
     }
 }
 

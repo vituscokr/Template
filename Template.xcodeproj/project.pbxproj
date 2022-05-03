@@ -76,6 +76,8 @@
 		A98C55642820F41C003072A5 /* App+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55632820F41C003072A5 /* App+Color.swift */; };
 		A98C55662820F537003072A5 /* App+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55652820F537003072A5 /* App+Font.swift */; };
 		A98C55682820FF5B003072A5 /* TestCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55672820FF5B003072A5 /* TestCalendarView.swift */; };
+		A98C556B2821146D003072A5 /* SlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C556A2821146D003072A5 /* SlideMenuView.swift */; };
+		A98C556D2821147A003072A5 /* TestSlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C556C2821147A003072A5 /* TestSlideMenuView.swift */; };
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
@@ -170,6 +172,8 @@
 		A98C55632820F41C003072A5 /* App+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Color.swift"; sourceTree = "<group>"; };
 		A98C55652820F537003072A5 /* App+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Font.swift"; sourceTree = "<group>"; };
 		A98C55672820FF5B003072A5 /* TestCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalendarView.swift; sourceTree = "<group>"; };
+		A98C556A2821146D003072A5 /* SlideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuView.swift; sourceTree = "<group>"; };
+		A98C556C2821147A003072A5 /* TestSlideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSlideMenuView.swift; sourceTree = "<group>"; };
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 		732D8227281278E900EFF407 /* TestUI */ = {
 			isa = PBXGroup;
 			children = (
+				A98C556928211458003072A5 /* SlideMenu */,
 				A98C55612820F2D1003072A5 /* TestPopupView.swift */,
 				A95B3C67281FB7D800FAA802 /* PhotoPicker */,
 				A9C033DC281BB60E0028D8C0 /* GraphView.swift */,
@@ -436,6 +441,15 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		A98C556928211458003072A5 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A98C556A2821146D003072A5 /* SlideMenuView.swift */,
+				A98C556C2821147A003072A5 /* TestSlideMenuView.swift */,
+			);
+			path = SlideMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -595,6 +609,7 @@
 				A9637E7A278FF117005E4654 /* BoardModel.swift in Sources */,
 				A94122CE280FF4F20025F8D4 /* Book.swift in Sources */,
 				A94CB8E4278FA53000AFFB98 /* Extensions+Color.swift in Sources */,
+				A98C556D2821147A003072A5 /* TestSlideMenuView.swift in Sources */,
 				A938B3372790FE1300B43CD5 /* AppDelegate.swift in Sources */,
 				732D8239281280AA00EFF407 /* AppConstant.swift in Sources */,
 				A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */,
@@ -628,6 +643,7 @@
 				A9637E6A278FEF41005E4654 /* WebPages.swift in Sources */,
 				A94122D0280FF60F0025F8D4 /* BookContainerView.swift in Sources */,
 				A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */,
+				A98C556B2821146D003072A5 /* SlideMenuView.swift in Sources */,
 				A9637E80278FF4DE005E4654 /* CoreConfig.swift in Sources */,
 				732D823E281281F800EFF407 /* ConfigView.swift in Sources */,
 				A94122CC280FF4E90025F8D4 /* BookEditView.swift in Sources */,
