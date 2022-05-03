@@ -75,6 +75,7 @@
 		A98C55622820F2D1003072A5 /* TestPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55612820F2D1003072A5 /* TestPopupView.swift */; };
 		A98C55642820F41C003072A5 /* App+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55632820F41C003072A5 /* App+Color.swift */; };
 		A98C55662820F537003072A5 /* App+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55652820F537003072A5 /* App+Font.swift */; };
+		A98C55682820FF5B003072A5 /* TestCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C55672820FF5B003072A5 /* TestCalendarView.swift */; };
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
@@ -168,6 +169,7 @@
 		A98C55612820F2D1003072A5 /* TestPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopupView.swift; sourceTree = "<group>"; };
 		A98C55632820F41C003072A5 /* App+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Color.swift"; sourceTree = "<group>"; };
 		A98C55652820F537003072A5 /* App+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+Font.swift"; sourceTree = "<group>"; };
+		A98C55672820FF5B003072A5 /* TestCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCalendarView.swift; sourceTree = "<group>"; };
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				A9637E5E278FE5E1005E4654 /* Badge.swift */,
 				A9637E5A278FB92F005E4654 /* ButtonStyles.swift */,
 				A9637E84278FF9FC005E4654 /* Sample */,
+				A98C55672820FF5B003072A5 /* TestCalendarView.swift */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */,
 				A98C55622820F2D1003072A5 /* TestPopupView.swift in Sources */,
 				A9637E78278FF0C8005E4654 /* BoardListView.swift in Sources */,
+				A98C55682820FF5B003072A5 /* TestCalendarView.swift in Sources */,
 				A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */,
 				A938B3352790F9F100B43CD5 /* SampleTextView.swift in Sources */,
 				A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */,
