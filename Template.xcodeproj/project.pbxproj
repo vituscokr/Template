@@ -79,6 +79,8 @@
 		A98C556B2821146D003072A5 /* SlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C556A2821146D003072A5 /* SlideMenuView.swift */; };
 		A98C556D2821147A003072A5 /* TestSlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C556C2821147A003072A5 /* TestSlideMenuView.swift */; };
 		A98EE0D727A126B0006C070F /* SampleGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EE0D627A126B0006C070F /* SampleGalleryView.swift */; };
+		A994A4E728220683007D3D05 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A994A4E628220683007D3D05 /* LoginView.swift */; };
+		A994A4ED28221056007D3D05 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = A994A4EC28221056007D3D05 /* ViewInspector */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
 		A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */; };
@@ -175,6 +177,7 @@
 		A98C556A2821146D003072A5 /* SlideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuView.swift; sourceTree = "<group>"; };
 		A98C556C2821147A003072A5 /* TestSlideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSlideMenuView.swift; sourceTree = "<group>"; };
 		A98EE0D627A126B0006C070F /* SampleGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleGalleryView.swift; sourceTree = "<group>"; };
+		A994A4E628220683007D3D05 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
 		A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLSSButtonStyleView.swift; sourceTree = "<group>"; };
@@ -195,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A994A4ED28221056007D3D05 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +328,7 @@
 				A9637E5A278FB92F005E4654 /* ButtonStyles.swift */,
 				A9637E84278FF9FC005E4654 /* Sample */,
 				A98C55672820FF5B003072A5 /* TestCalendarView.swift */,
+				A994A4E628220683007D3D05 /* LoginView.swift */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -489,6 +494,9 @@
 				A94CB8C8278FA48500AFFB98 /* PBXTargetDependency */,
 			);
 			name = TemplateTests;
+			packageProductDependencies = (
+				A994A4EC28221056007D3D05 /* ViewInspector */,
+			);
 			productName = TemplateTests;
 			productReference = A94CB8C6278FA48500AFFB98 /* TemplateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -546,6 +554,7 @@
 			packageReferences = (
 				A9637E7B278FF1AD005E4654 /* XCRemoteSwiftPackageReference "LSSLibrary" */,
 				732D821D28123D1C00EFF407 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				A994A4EB28221056007D3D05 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = A94CB8B2278FA48400AFFB98 /* Products */;
 			projectDirPath = "";
@@ -655,6 +664,7 @@
 				A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */,
 				A96C7DA0281BA0B900968949 /* TestArchiveView.swift in Sources */,
 				A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */,
+				A994A4E728220683007D3D05 /* LoginView.swift in Sources */,
 				A98C55642820F41C003072A5 /* App+Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1014,6 +1024,14 @@
 				kind = branch;
 			};
 		};
+		A994A4EB28221056007D3D05 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1031,6 +1049,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9637E7B278FF1AD005E4654 /* XCRemoteSwiftPackageReference "LSSLibrary" */;
 			productName = LSSLibrary;
+		};
+		A994A4EC28221056007D3D05 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A994A4EB28221056007D3D05 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
 		};
 /* End XCSwiftPackageProductDependency section */
 

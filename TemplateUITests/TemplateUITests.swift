@@ -3,40 +3,80 @@
 //  TemplateUITests
 //
 //  Created by Gyeongtae Nam on 2022/01/13.
-//
+// https://www.raywenderlich.com/30227776-swiftui-testing-with-viewinspector-for-ios 
+// https://minosaekki.tistory.com/40
 
 import XCTest
 
 class TemplateUITests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+//    override func setUpWithError() throws {
+//        // Put setup code here. This method is called before the invocation of each test method in the class.
+//
+//        // In UI tests it is usually best to stop immediately when a failure occurs.
+//        continueAfterFailure = false
+//
+//        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+//    }
+//
+//    override func tearDownWithError() throws {
+//        // Put teardown code here. This method is called after the invocation of each test method in the class.
+//    }
+//
+    /*
+    func testLogin() throws {
+        
         let app = XCUIApplication()
         app.launch()
+////
+        
+        let elementsQuery = app.scrollViews.otherElements
+        
+        
+        
+        let loginButton = elementsQuery.buttons["login"]
+        loginButton.tap()
+        
+        let idTextField = app.textFields["id"]
+        
+        idTextField.tap()
+        idTextField.typeText("test")
+        
+        
+        
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        let pwTextField = app.textFields["pw"]
+        pwTextField.tap()
+        pwTextField.typeText("pass")
+        
+        app.buttons["login"].tap()
+        
+        let label =  app.staticTexts["isLogin"]
+        
+        XCTAssert(label.exists)
+        
+        
+        
+        
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
     }
+    */
+
+//    func testExample() throws {
+//        // UI tests must launch the application that they test.
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        // Use recording to get started writing UI tests.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    }
+//
+//    func testLaunchPerformance() throws {
+//        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+//            // This measures how long it takes to launch your application.
+//            measure(metrics: [XCTApplicationLaunchMetric()]) {
+//                XCUIApplication().launch()
+//            }
+//        }
+//    }
 }

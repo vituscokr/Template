@@ -71,7 +71,11 @@ struct MainView: View {
                 
                 
 
-                
+                NavigationLink(destination: {
+                    LoginView()
+                }, label: {
+                    Text("login")
+                })
                 NavigationLink(destination: {
                     TestSlideMenuView()
                 }, label: {
