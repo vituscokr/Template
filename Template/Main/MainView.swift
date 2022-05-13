@@ -83,6 +83,12 @@ struct MainView: View {
                 })
                 
                 
+                Button(action: {
+                    ContentRepository().writeContents()
+                }){
+                    Text("ContentRepository Save")
+                }
+                
                 
                 Text("This is Test 18")
                     .applyFont(font: .bold18)

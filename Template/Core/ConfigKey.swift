@@ -14,29 +14,14 @@ enum ConfigKey : String , CaseIterable {
     case tokenExpire
     case refreshTokenExpire
     case deviceId
-    
-    
-//    var val :String =  {
-//
-//        switch(self) {
-//        case .fcmToken:
-//            return
-//
-//        }
-//
-//    }
-    
-    //TEST
     case testKey
     
     
     static func keyFromString (key : String ) -> ConfigKey?  {
-        for config in ConfigKey.allCases {
-            if config.rawValue == key {
-                return config
-            }
+        guard let ConfigKey  = ConfigKey.allCases.filter({ $0.rawValue == key  }).first else {
+            return nil
         }
-        return nil
+        return ConfigKey
     }
 }
 
