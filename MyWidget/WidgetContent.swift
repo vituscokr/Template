@@ -10,7 +10,7 @@ import SwiftUI
 import WidgetKit
 
 struct WidgetContent : Codable , TimelineEntry {
-    var date = Date()
+    var date = Date().addingTimeInterval(30)
     var name: String
     let cardViewSubtitle: String
     let descripitonPlainText: String

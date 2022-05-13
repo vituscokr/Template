@@ -19,14 +19,12 @@ class ContentRepository : ObservableObject {
         for i in  1...10  {
           let content =  WidgetContent(
                 
-                name: "(\(i)-iOS Concurrency with GCD and Operations",
-                cardViewSubtitle: "\(i)iOS & Swift",
+                name: "(\(i)",
+                cardViewSubtitle: "\(i)",
                 descripitonPlainText: """
-                                \(i) Learn how to add concurrency to your apps! \
-                Keep your app’s UI responsive to give your \
-                users a great user experience.
-                """,
-                releaseAtDateTimeString: "\(i) Jun 23 2020 • Video Course (3 hrs, 21 mins)")
+\(i)
+""",
+                releaseAtDateTimeString: "\(i)")
             
             contents.append(content)
         }
@@ -44,7 +42,7 @@ class ContentRepository : ObservableObject {
         
         
         let archiveURL = FileManager.sharedContainerURL()
-            .appendingPathComponent("cotents.json")
+            .appendingPathComponent("contents.json")
         
         let encoder = JSONEncoder()
         if let dataToSave = try? encoder.encode(widgetContents) {

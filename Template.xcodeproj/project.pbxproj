@@ -101,6 +101,8 @@
 		A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */; };
 		A9D71BE1282DF0B800BCF4D7 /* ContentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BE0282DF0B800BCF4D7 /* ContentRepository.swift */; };
 		A9D71BE2282DF4B400BCF4D7 /* Extensions+FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A957FFA4282A466F005B7572 /* Extensions+FileManager.swift */; };
+		A9D71BEB282E295800BCF4D7 /* TimelineInterval.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */; };
+		A9D71BEC282E296700BCF4D7 /* TimelineInterval.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		A9F1380C2824F5430055E1C7 /* CloseWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F1380B2824F5430055E1C7 /* CloseWindowView.swift */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +237,7 @@
 		A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLSSButtonStyleView.swift; sourceTree = "<group>"; };
 		A9D71BE0282DF0B800BCF4D7 /* ContentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentRepository.swift; sourceTree = "<group>"; };
 		A9D71BE3282DF7D900BCF4D7 /* MyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyWidgetExtension.entitlements; sourceTree = "<group>"; };
+		A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TimelineInterval.intentdefinition; sourceTree = "<group>"; };
 		A9F1380B2824F5430055E1C7 /* CloseWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseWindowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -538,6 +541,7 @@
 				A9761B382828CF22007A0827 /* Assets.xcassets */,
 				A9761B3A2828CF22007A0827 /* Info.plist */,
 				A9761B442828DC2E007A0827 /* EntryView.swift */,
+				A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */,
 			);
 			path = MyWidget;
 			sourceTree = "<group>";
@@ -763,6 +767,7 @@
 				A9637E78278FF0C8005E4654 /* BoardListView.swift in Sources */,
 				A98C55682820FF5B003072A5 /* TestCalendarView.swift in Sources */,
 				A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */,
+				A9D71BEC282E296700BCF4D7 /* TimelineInterval.intentdefinition in Sources */,
 				A938B3352790F9F100B43CD5 /* SampleTextView.swift in Sources */,
 				A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */,
 				A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */,
@@ -836,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9761B372828CF21007A0827 /* MyWidget.swift in Sources */,
+				A9D71BEB282E295800BCF4D7 /* TimelineInterval.intentdefinition in Sources */,
 				A9D71BE2282DF4B400BCF4D7 /* Extensions+FileManager.swift in Sources */,
 				A9761B432828DBD0007A0827 /* WidgetContent.swift in Sources */,
 				A9761B452828DC2E007A0827 /* EntryView.swift in Sources */,
