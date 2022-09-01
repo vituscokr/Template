@@ -96,6 +96,16 @@ struct MainView: View {
                 Text("This is Test 18")
                     .applyFont(font: .regular18)
                 
+                
+                
+                NavigationLink {
+                    TestInfiniteScrollView()
+                } label: {
+                    Text("infiniteScrollView" )
+                }
+
+                
+                
                 //
                 //            Text("This is test 18")
                 //                .applyFont(font: .bold18, underlined: true)
