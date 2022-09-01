@@ -24,6 +24,15 @@
 		732D82402812820600EFF407 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732D823F2812820600EFF407 /* ConfigModel.swift */; };
 		732D82422812821400EFF407 /* ConfigStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732D82412812821400EFF407 /* ConfigStorage.swift */; };
 		A912471E28C092EF0082285D /* WheelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912471D28C092EF0082285D /* WheelPickerView.swift */; };
+		A912472128C09AE50082285D /* Triangulation .swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472028C09AE50082285D /* Triangulation .swift */; };
+		A912472D28C09C530082285D /* TriangulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472328C09C530082285D /* TriangulationView.swift */; };
+		A912472E28C09C530082285D /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472428C09C530082285D /* Hash.swift */; };
+		A912472F28C09C530082285D /* Circumcircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472528C09C530082285D /* Circumcircle.swift */; };
+		A912473028C09C530082285D /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472628C09C530082285D /* Edge.swift */; };
+		A912473128C09C530082285D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472728C09C530082285D /* Extension.swift */; };
+		A912473328C09C530082285D /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472A28C09C530082285D /* Vertex.swift */; };
+		A912473428C09C530082285D /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472B28C09C530082285D /* Triangle.swift */; };
+		A912473528C09C530082285D /* Delaunay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912472C28C09C530082285D /* Delaunay.swift */; };
 		A938B3332790F3D600B43CD5 /* TextModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938B3322790F3D600B43CD5 /* TextModifer.swift */; };
 		A938B3352790F9F100B43CD5 /* SampleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938B3342790F9F100B43CD5 /* SampleTextView.swift */; };
 		A938B3372790FE1300B43CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938B3362790FE1300B43CD5 /* AppDelegate.swift */; };
@@ -166,6 +175,15 @@
 		732D823F2812820600EFF407 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
 		732D82412812821400EFF407 /* ConfigStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigStorage.swift; sourceTree = "<group>"; };
 		A912471D28C092EF0082285D /* WheelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerView.swift; sourceTree = "<group>"; };
+		A912472028C09AE50082285D /* Triangulation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Triangulation .swift"; sourceTree = "<group>"; };
+		A912472328C09C530082285D /* TriangulationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangulationView.swift; sourceTree = "<group>"; };
+		A912472428C09C530082285D /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		A912472528C09C530082285D /* Circumcircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circumcircle.swift; sourceTree = "<group>"; };
+		A912472628C09C530082285D /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		A912472728C09C530082285D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		A912472A28C09C530082285D /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		A912472B28C09C530082285D /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		A912472C28C09C530082285D /* Delaunay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delaunay.swift; sourceTree = "<group>"; };
 		A938B3322790F3D600B43CD5 /* TextModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifer.swift; sourceTree = "<group>"; };
 		A938B3342790F9F100B43CD5 /* SampleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTextView.swift; sourceTree = "<group>"; };
 		A938B3362790FE1300B43CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +321,7 @@
 		732D8227281278E900EFF407 /* TestUI */ = {
 			isa = PBXGroup;
 			children = (
+				A912472228C09C530082285D /* Triangulation */,
 				A99FA6B428C04DB20044BECB /* PaginationView.swift */,
 				A98C556928211458003072A5 /* SlideMenu */,
 				A98C55612820F2D1003072A5 /* TestPopupView.swift */,
@@ -321,6 +340,7 @@
 				A99FA6B828C067050044BECB /* TestScrollViewOffsetView.swift */,
 				A99FA6BA28C077040044BECB /* TestPreferenceView.swift */,
 				A912471D28C092EF0082285D /* WheelPickerView.swift */,
+				A912472028C09AE50082285D /* Triangulation .swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -343,6 +363,21 @@
 				732D82412812821400EFF407 /* ConfigStorage.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		A912472228C09C530082285D /* Triangulation */ = {
+			isa = PBXGroup;
+			children = (
+				A912472328C09C530082285D /* TriangulationView.swift */,
+				A912472428C09C530082285D /* Hash.swift */,
+				A912472528C09C530082285D /* Circumcircle.swift */,
+				A912472628C09C530082285D /* Edge.swift */,
+				A912472728C09C530082285D /* Extension.swift */,
+				A912472A28C09C530082285D /* Vertex.swift */,
+				A912472B28C09C530082285D /* Triangle.swift */,
+				A912472C28C09C530082285D /* Delaunay.swift */,
+			);
+			path = Triangulation;
 			sourceTree = "<group>";
 		};
 		A938B3312790F3AC00B43CD5 /* Modifier */ = {
@@ -792,6 +827,7 @@
 				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
 				A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */,
 				A96D32E528177542004E9CCE /* Country+CoreDataClass.swift in Sources */,
+				A912473528C09C530082285D /* Delaunay.swift in Sources */,
 				A99FA6BB28C077040044BECB /* TestPreferenceView.swift in Sources */,
 				A9637E86278FFA0E005E4654 /* SampleCoreConfig.swift in Sources */,
 				732D823228127F8600EFF407 /* MyImageView.swift in Sources */,
@@ -801,10 +837,13 @@
 				A94122CA280FF4DE0025F8D4 /* BookView.swift in Sources */,
 				A9637E69278FEF41005E4654 /* Router.swift in Sources */,
 				A96D32E628177542004E9CCE /* Country+CoreDataProperties.swift in Sources */,
+				A912473328C09C530082285D /* Vertex.swift in Sources */,
+				A912473128C09C530082285D /* Extension.swift in Sources */,
 				A96C7D9E281BA00900968949 /* BarcodeView.swift in Sources */,
 				732D823B281281B900EFF407 /* ConcurrencyView.swift in Sources */,
 				732D82372812801800EFF407 /* ConcurrencyModel.swift in Sources */,
 				A9637E68278FEF41005E4654 /* APIManager.swift in Sources */,
+				A912472D28C09C530082285D /* TriangulationView.swift in Sources */,
 				732D82262812773800EFF407 /* LaunchModel.swift in Sources */,
 				A95B3C66281FAFC400FAA802 /* TestMyFileView.swift in Sources */,
 				A9637E8D27900201005E4654 /* ConfigKey.swift in Sources */,
@@ -813,17 +852,22 @@
 				A9637E6A278FEF41005E4654 /* WebPages.swift in Sources */,
 				A94122D0280FF60F0025F8D4 /* BookContainerView.swift in Sources */,
 				A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */,
+				A912473028C09C530082285D /* Edge.swift in Sources */,
 				A98C556B2821146D003072A5 /* SlideMenuView.swift in Sources */,
 				A9637E80278FF4DE005E4654 /* CoreConfig.swift in Sources */,
 				732D823E281281F800EFF407 /* ConfigView.swift in Sources */,
+				A912472E28C09C530082285D /* Hash.swift in Sources */,
 				A99FA6B928C067050044BECB /* TestScrollViewOffsetView.swift in Sources */,
 				A9761B422828DBD0007A0827 /* WidgetContent.swift in Sources */,
 				A94122CC280FF4E90025F8D4 /* BookEditView.swift in Sources */,
 				A938B3332790F3D600B43CD5 /* TextModifer.swift in Sources */,
+				A912473428C09C530082285D /* Triangle.swift in Sources */,
 				A98C55662820F537003072A5 /* App+Font.swift in Sources */,
 				732D822B2812790D00EFF407 /* TestLottieView.swift in Sources */,
 				A96D32F128178B61004E9CCE /* Config+CoreDataProperties.swift in Sources */,
+				A912472F28C09C530082285D /* Circumcircle.swift in Sources */,
 				A9D71BE1282DF0B800BCF4D7 /* ContentRepository.swift in Sources */,
+				A912472128C09AE50082285D /* Triangulation .swift in Sources */,
 				732D82402812820600EFF407 /* ConfigModel.swift in Sources */,
 				A96D32F028178B61004E9CCE /* Config+CoreDataClass.swift in Sources */,
 				A96C7DA0281BA0B900968949 /* TestArchiveView.swift in Sources */,

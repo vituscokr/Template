@@ -117,6 +117,13 @@ struct MainView: View {
                     Text("TestPreference" )
                 }
                 
+                NavigationLink {
+                   
+                TestTriangulationView()
+                }label : {
+                    Text("Triaulation")
+                }
+                
                 
                 
                 //
