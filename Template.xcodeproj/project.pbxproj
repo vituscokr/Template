@@ -99,6 +99,7 @@
 		A99FA6B528C04DB20044BECB /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA6B428C04DB20044BECB /* PaginationView.swift */; };
 		A99FA6B728C0514F0044BECB /* TestInfiniteScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA6B628C0514F0044BECB /* TestInfiniteScrollView.swift */; };
 		A99FA6B928C067050044BECB /* TestScrollViewOffsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA6B828C067050044BECB /* TestScrollViewOffsetView.swift */; };
+		A99FA6BB28C077040044BECB /* TestPreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA6BA28C077040044BECB /* TestPreferenceView.swift */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
 		A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */; };
@@ -238,6 +239,7 @@
 		A99FA6B428C04DB20044BECB /* PaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
 		A99FA6B628C0514F0044BECB /* TestInfiniteScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInfiniteScrollView.swift; sourceTree = "<group>"; };
 		A99FA6B828C067050044BECB /* TestScrollViewOffsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScrollViewOffsetView.swift; sourceTree = "<group>"; };
+		A99FA6BA28C077040044BECB /* TestPreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPreferenceView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
 		A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLSSButtonStyleView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				A95B3C65281FAFC400FAA802 /* TestMyFileView.swift */,
 				A99FA6B628C0514F0044BECB /* TestInfiniteScrollView.swift */,
 				A99FA6B828C067050044BECB /* TestScrollViewOffsetView.swift */,
+				A99FA6BA28C077040044BECB /* TestPreferenceView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
 				A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */,
 				A96D32E528177542004E9CCE /* Country+CoreDataClass.swift in Sources */,
+				A99FA6BB28C077040044BECB /* TestPreferenceView.swift in Sources */,
 				A9637E86278FFA0E005E4654 /* SampleCoreConfig.swift in Sources */,
 				732D823228127F8600EFF407 /* MyImageView.swift in Sources */,
 				A9637E83278FF9F1005E4654 /* MainView.swift in Sources */,

@@ -111,6 +111,12 @@ struct MainView: View {
                 }
 
                 
+                NavigationLink {
+                    TestPreferenceView(messages: ["a","b","c"])
+                } label: {
+                    Text("TestPreference" )
+                }
+                
                 
                 
                 //
