@@ -96,6 +96,7 @@
 		A994A4F328223977007D3D05 /* App+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A994A4EE2822381D007D3D05 /* App+URL.swift */; };
 		A994A4F528224448007D3D05 /* ConfigKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A994A4F428224448007D3D05 /* ConfigKeyTests.swift */; };
 		A994A4F628224466007D3D05 /* ConfigKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9637E8C27900201005E4654 /* ConfigKey.swift */; };
+		A99FA6B528C04DB20044BECB /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FA6B428C04DB20044BECB /* PaginationView.swift */; };
 		A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DC281BB60E0028D8C0 /* GraphView.swift */; };
 		A9C033DF281BB7D00028D8C0 /* TestGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */; };
 		A9C033E1281BBD010028D8C0 /* TestLSSButtonStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */; };
@@ -232,6 +233,7 @@
 		A994A4EE2822381D007D3D05 /* App+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+URL.swift"; sourceTree = "<group>"; };
 		A994A4F028223924007D3D05 /* App+URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+URLTests.swift"; sourceTree = "<group>"; };
 		A994A4F428224448007D3D05 /* ConfigKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigKeyTests.swift; sourceTree = "<group>"; };
+		A99FA6B428C04DB20044BECB /* PaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
 		A9C033DC281BB60E0028D8C0 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		A9C033DE281BB7D00028D8C0 /* TestGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGraphView.swift; sourceTree = "<group>"; };
 		A9C033E0281BBD010028D8C0 /* TestLSSButtonStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLSSButtonStyleView.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		732D8227281278E900EFF407 /* TestUI */ = {
 			isa = PBXGroup;
 			children = (
+				A99FA6B428C04DB20044BECB /* PaginationView.swift */,
 				A98C556928211458003072A5 /* SlideMenu */,
 				A98C55612820F2D1003072A5 /* TestPopupView.swift */,
 				A95B3C67281FB7D800FAA802 /* PhotoPicker */,
@@ -750,6 +753,7 @@
 				A94CB8C1278FA48500AFFB98 /* Template.xcdatamodeld in Sources */,
 				A94CB8E6278FA63600AFFB98 /* SampleColorView.swift in Sources */,
 				732D82292812790000EFF407 /* TestSimpleWebView.swift in Sources */,
+				A99FA6B528C04DB20044BECB /* PaginationView.swift in Sources */,
 				A95B3C6B281FBB9F00FAA802 /* TestPhotoPickerView.swift in Sources */,
 				A9637E76278FEFF9005E4654 /* BoardType.swift in Sources */,
 				A94CB8B7278FA48400AFFB98 /* ContentView.swift in Sources */,
