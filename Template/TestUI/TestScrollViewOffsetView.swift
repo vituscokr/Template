@@ -8,7 +8,17 @@
 import SwiftUI
 import LSSLibrary
 
-
+///     let x = 8.625
+///     print(x / 0.75)
+///     // Prints "11.5"
+///
+///     let q = (x / 0.75).rounded(.toNearestOrEven)
+///     // q == 12.0
+///     let r = x.remainder(dividingBy: 0.75)
+///     // r == -0.375
+///
+///     let x1 = 0.75 * q + r
+///     // x1 == 8.625
 
 
 struct TestScrollViewOffsetView: View {

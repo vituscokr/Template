@@ -8,6 +8,25 @@
 import SwiftUI
 // 참고 : https://sweetdev.tistory.com/719
 
+//
+//https://sweetdev.tistory.com/719
+//
+//
+//                ScrollView([.horizontal] , showsIndicators:  false ) {
+//                    HStack {
+//                        TabView {
+//                            ForEach(0..<3) { i in
+//                                Text("i")
+//                            }
+//                        }
+//                        .frame(width: UIScreen.main.bounds.width)
+//                        .tabViewStyle(PageTabViewStyle())
+//                    }
+//                }
+
+
+
+
 struct PageData : Identifiable {
     var id = UUID()
     var value : Int
