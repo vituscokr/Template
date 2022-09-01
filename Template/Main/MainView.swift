@@ -104,6 +104,13 @@ struct MainView: View {
                     Text("infiniteScrollView" )
                 }
 
+                NavigationLink {
+                    TestScrollViewOffsetView()
+                } label: {
+                    Text("ScrollViewOffsetVie" )
+                }
+
+                
                 
                 
                 //
