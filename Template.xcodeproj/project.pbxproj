@@ -23,6 +23,7 @@
 		732D823E281281F800EFF407 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732D823D281281F800EFF407 /* ConfigView.swift */; };
 		732D82402812820600EFF407 /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732D823F2812820600EFF407 /* ConfigModel.swift */; };
 		732D82422812821400EFF407 /* ConfigStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732D82412812821400EFF407 /* ConfigStorage.swift */; };
+		A912471E28C092EF0082285D /* WheelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912471D28C092EF0082285D /* WheelPickerView.swift */; };
 		A938B3332790F3D600B43CD5 /* TextModifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938B3322790F3D600B43CD5 /* TextModifer.swift */; };
 		A938B3352790F9F100B43CD5 /* SampleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938B3342790F9F100B43CD5 /* SampleTextView.swift */; };
 		A938B3372790FE1300B43CD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938B3362790FE1300B43CD5 /* AppDelegate.swift */; };
@@ -164,6 +165,7 @@
 		732D823D281281F800EFF407 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		732D823F2812820600EFF407 /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
 		732D82412812821400EFF407 /* ConfigStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigStorage.swift; sourceTree = "<group>"; };
+		A912471D28C092EF0082285D /* WheelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelPickerView.swift; sourceTree = "<group>"; };
 		A938B3322790F3D600B43CD5 /* TextModifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifer.swift; sourceTree = "<group>"; };
 		A938B3342790F9F100B43CD5 /* SampleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTextView.swift; sourceTree = "<group>"; };
 		A938B3362790FE1300B43CD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 				A99FA6B628C0514F0044BECB /* TestInfiniteScrollView.swift */,
 				A99FA6B828C067050044BECB /* TestScrollViewOffsetView.swift */,
 				A99FA6BA28C077040044BECB /* TestPreferenceView.swift */,
+				A912471D28C092EF0082285D /* WheelPickerView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -755,6 +758,7 @@
 			files = (
 				A9637E66278FEF41005E4654 /* APIEventLogger.swift in Sources */,
 				A9F1380C2824F5430055E1C7 /* CloseWindowView.swift in Sources */,
+				A912471E28C092EF0082285D /* WheelPickerView.swift in Sources */,
 				732D82422812821400EFF407 /* ConfigStorage.swift in Sources */,
 				732D8224281276F500EFF407 /* LaunchView.swift in Sources */,
 				A94CB8BE278FA48500AFFB98 /* Persistence.swift in Sources */,
