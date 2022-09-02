@@ -52,7 +52,9 @@ struct Provider: IntentTimelineProvider {
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        let interval = configuration.interval as! Int
+        guard let interval = configuration.interval as? Int else {
+            return
+        }
         for index in 0..<entries.count {
             entries[index].date = Calendar.current.date(byAdding: .second, value: index * interval, to: currentDate)!
         }

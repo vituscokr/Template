@@ -7,9 +7,7 @@
 
 import SwiftUI
 import LSSLibrary
-
-
-enum WeekDay : String {
+enum WeekDay: String {
     case sunday
     case monday
     case tuesday
@@ -18,8 +16,8 @@ enum WeekDay : String {
     case friday
     case saturday
     
-    var longString :String  {
-        switch(self) {
+    var longString :String {
+        switch self {
         case .sunday:  return "일요일"
         case .monday: return "월요일"
         case .tuesday: return "화요일"
@@ -30,8 +28,8 @@ enum WeekDay : String {
         }
     }
     
-    var shortString :String  {
-        switch(self) {
+    var shortString :String {
+        switch self {
         case .sunday:  return "일"
         case .monday: return "월"
         case .tuesday: return "화"
@@ -41,10 +39,9 @@ enum WeekDay : String {
         case .saturday: return "토"
         }
     }
-    
-    
-    static func getHeadTitle(from:Int) -> String?  {
-        switch(from) {
+
+    static func getHeadTitle(from: Int) -> String? {
+        switch from  {
         case 1: return WeekDay.sunday.shortString
         case 2: return WeekDay.monday.shortString
         case 3: return WeekDay.tuesday.shortString
@@ -79,12 +76,12 @@ enum WeekDay : String {
 //    }
 }
 
-struct CalendarCell:Identifiable {
+struct CalendarCell: Identifiable {
 
     var id :UUID =  UUID()
     var date: Date?
     
-    var day :String {
+    var day: String {
         guard let date = date  else {
             return ""
         }
@@ -95,26 +92,25 @@ struct CalendarCell:Identifiable {
 }
 
 struct TestCalendarView: View {
-    
-    
+
     @State var items = [CalendarCell]()
     
-    var column : [GridItem] {
+    var column: [GridItem] {
         let width: CGFloat = UIScreen.main.bounds.size.width / 7
-        return Array(repeating: .init(.fixed(width), spacing:0, alignment: .leading), count : 7)
+        return Array(repeating: .init(.fixed(width), spacing: 0, alignment: .leading), count: 7)
     }
     
-    @State var currentDate:Date = Date()
+    @State var currentDate: Date = Date()
     
     var startOfMonth  :Date {
         return currentDate.startOfMonth()
     }
     
-    var year :String {
+    var year: String {
         currentDate.string(type: .year)
     }
     
-    var month :String {
+    var month: String {
         currentDate.string(type: .month)
     }
     
@@ -189,29 +185,20 @@ struct TestCalendarView: View {
         let start = currentDate.startOfMonth()
         let end = currentDate.endOfMonth()
         
-        let y = currentDate.string(type: .year)
-        let m = currentDate.string(type: .month)
+        let year = currentDate.string(type: .year)
+        let month = currentDate.string(type: .month)
         
         
         for _ in 1..<start.weekday {
             items.append(CalendarCell())
         }
-        let s = Int(start.string(type: .day))!
-        let e = Int(end.string(type: .day))!
+        let newStart = Int(start.string(type: .day))!
+        let newEnd = Int(end.string(type: .day))!
         
+
         
-        Debug.log(y)
-        Debug.log(m)
-        Debug.log(s)
-        Debug.log(e)
-        
-        
-       
-        
-        
-        
-        for i in s...e {
-            let string = "\(y)-\(m)-\(i)"
+        for day in newStart...newEnd {
+            let string = "\(year)-\(month)-\(day)"
             let date = string.date(type: .b)
             items.append(CalendarCell(date: date))
         }

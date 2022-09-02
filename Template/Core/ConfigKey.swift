@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ConfigKey : String , CaseIterable {
+enum ConfigKey: String, CaseIterable {
     case fcmToken
     case accessToken
     case refreshToken
@@ -16,15 +16,12 @@ enum ConfigKey : String , CaseIterable {
     case deviceId
     case testKey
     
-    
-    static func keyFromString (key : String ) -> ConfigKey?  {
-        guard let ConfigKey  = ConfigKey.allCases.filter({ $0.rawValue == key  }).first else {
+    static func keyFromString (key: String ) -> ConfigKey? {
+        guard let configKey  = ConfigKey.allCases.filter({ configkey  in
+            configkey.rawValue == key
+        }).first else {
             return nil
         }
-        return ConfigKey
+        return configKey
     }
 }
-
-
-
-

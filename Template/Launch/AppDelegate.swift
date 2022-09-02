@@ -12,24 +12,20 @@ import LSSLibrary
 
 class AppDelegate : NSObject, UIApplicationDelegate, ObservableObject, UNUserNotificationCenterDelegate {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil)
+    -> Bool {
         saveDeviceId()
-        
         setupBackgroundRegister()
-        
-//TODO: Firebase
-//        FirebaseApp.configure()
-//        setupNotification(application)
         return true
     }
     
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+    func application(_ application: UIApplication,
+                     supportedInterfaceOrientationsFor window: UIWindow?)
+    -> UIInterfaceOrientationMask {
         return .portrait
     }
-    
 }
-
-
 import BackgroundTasks
 extension AppDelegate {
     func saveDeviceId() {
@@ -40,27 +36,21 @@ extension AppDelegate {
     }
 }
 
-
-//ios 13 이전에 적용되는 방식
-//https://blog.naver.com/PostView.nhn?blogId=horajjan&logNo=220577912369
-//Signing & Capabilities > Background Modes enable
+// ios 13 이전에 적용되는 방식
+// https://blog.naver.com/PostView.nhn?blogId=horajjan&logNo=220577912369
+// Signing & Capabilities > Background Modes enable
 // Background Modes > Backgroudnd fetch check
-
-//Info.plist Permitted background task scheduler identifiers
-//백그라운드 패치를 초기화함
-//가장 짧은 주기롱 옵션 설정
-
+// Info.plist Permitted background task scheduler identifiers
+// 백그라운드 패치를 초기화함
+// 가장 짧은 주기롱 옵션 설정
 //import BackgroundTasks
 //https://medium.com/hcleedev/swift-swiftui-프로젝트에-appdelegate-scenedelegate-만들기-4fa2d85191e
-
-
 //https://developer.apple.com/videos/play/wwdc2019/707/
 //https://developer.apple.com/videos/play/wwdc2019/707
 //https://www.andyibanez.com/posts/modern-background-tasks-ios13/
 //https://pokeapi.co
 //지금 이방법은 ios 13 이하에서 사용
 //        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
-
 //        BGTaskScheduler
 //            BGTask
 //                BGAppRefreshTask
@@ -69,29 +59,36 @@ extension AppDelegate {
 //                    BGProcessingTaskReques
 /// 백그라운드 관련 extension
 /// https://lemon-dev.tistory.com/entry/iOS-BackgroundTask-Framework-간단-정리
-extension AppDelegate  {
-
+extension AppDelegate {
     func setupBackgroundRegister() {
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: AppConstant.backgroundFetchIdentifier, using: nil) { task in
-            self.handleAppRefreshTask(task: task as! BGAppRefreshTask)
+        BGTaskScheduler.shared.register(
+            forTaskWithIdentifier: AppConstant.backgroundFetchIdentifier,
+            using: nil) { task in
+                guard let task = task as? BGAppRefreshTask else {
+                    return
+                }
+                self.handleAppRefreshTask(task: task)
         }
         
-        BGTaskScheduler.shared.register(forTaskWithIdentifier: AppConstant.backgroundProcessIdentifier, using: nil) { task in
-            self.handleAppProcessingTask(task: task as! BGProcessingTask)
+        BGTaskScheduler.shared.register(
+            forTaskWithIdentifier: AppConstant.backgroundProcessIdentifier,
+            using: nil) { task in
+                guard let task = task as? BGProcessingTask else {
+                    return
+                }
+            self.handleAppProcessingTask(task: task )
         }
     }
-    
     
     func scheduleBackground() {
         scheduleBackgroundFetchTask()
         scheduleBackgroundProcessingTask()
         
-        //해당 라인 위에 브레이크를 걸어주세요.
-        //이후 break 걸고
-        //콘솔에서 명령어 입력
-        //e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.fetch"]
-        
-       // e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.process"]
+// 해당 라인 위에 브레이크를 걸어주세요.
+// 이후 break 걸고
+// 콘솔에서 명령어 입력
+// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.fetch"]
+// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.process"]
         
     }
     
@@ -99,12 +96,11 @@ extension AppDelegate  {
         
         Debug.log(#function)
         
-        
         let request = BGAppRefreshTaskRequest(identifier: AppConstant.backgroundFetchIdentifier)
         request.earliestBeginDate = Date(timeIntervalSinceNow: 1 * 60)
         do {
             try BGTaskScheduler.shared.submit(request)
-        }catch {
+        } catch {
             print("Unable to submit task: \(error.localizedDescription)")
         }
     }

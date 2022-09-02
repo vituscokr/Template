@@ -4,9 +4,11 @@
 //
 //  Created by Gyeongtae Nam on 2022/09/01.
 //
+//https://www.raywenderlich.com/34699757-swiftui-view-modifiers-tutorial-for-ios
+
 
 import Foundation
-import SwiftUI 
+import SwiftUI
 
 class EmailValidator : ObservableObject {
     let emailPattern = #"^\S+@\S+\.\S+S"#
