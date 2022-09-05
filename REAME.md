@@ -10,3 +10,6 @@ func log(message: String,
 }
 
 log("some message")
+
+
+

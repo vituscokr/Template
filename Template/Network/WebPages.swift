@@ -9,18 +9,15 @@ import Foundation
 import Alamofire
 
 
-//if let url = URL(string: AppConstant.serverURL + "/page/signup/phone-auth") {
+// if let url = URL(string: AppConstant.serverURL + "/page/signup/phone-auth") {
 //
 //    Debug.log(url)
 //    let urlRequest = URLRequest(url:url)
 //    webView?.load(urlRequest)
-//}
-
-
+// }
 
 enum WebPages : URLConvertible {
-
-    //(pg계약전까지 흰 페이지만 뜸)핸드폰 본인인증 페이지 가져오기
+    // (pg계약전까지 흰 페이지만 뜸)핸드폰 본인인증 페이지 가져오기
     case phoneAuth
     /// 영수증 웹페이지
     case receipt(String)
@@ -28,13 +25,10 @@ enum WebPages : URLConvertible {
     case payment(String)
     ///이용약관 웹페이지 (약관 타입[1: 서비스 이용약관, 2:개인정보처리방침, 3:개인정보 수집 및 이용동의서, 4: 마케팅 활용 수신 동의 및 광고성 정보 전송 동의서]
     case agreement(Int)
-    
     case companyInfo
     case refund
     case productInfo
-    
-    
-    
+
     var baseURL : String {
         return ""
 //        switch(AppConstant.environment) {
@@ -46,31 +40,28 @@ enum WebPages : URLConvertible {
 //            return AppConstant.serverURL
 //        }
     }
-    
     var path: String {
-        switch(self) {
+        switch self  {
         case .phoneAuth: return "/page/signup/phone-auth"
-        case .receipt(let job_id): return "/page/receipt?job_id=\(job_id)"
-        case .payment(let order_no): return "/page/payment/request?order_no=\(order_no)"
+        case .receipt(let jobId): return "/page/receipt?job_id=\(jobId)"
+        case .payment(let orderNo): return "/page/payment/request?order_no=\(orderNo)"
         case .agreement(let index): return "/page/agreement/\(index)"
         case .companyInfo: return "/page/company-info"
         case .refund: return "/page/refund"
         case .productInfo: return "/page/product-info"
-        
-        
         }
     }
 
     var title: String {
-        switch(self) {
+        switch self {
         case .phoneAuth:
             return ""
-        case .receipt(_) :
+        case .receipt:
             return "수수다 영수증"
-        case .payment(_):
+        case .payment:
             return ""
         case .agreement(let type) :
-            switch(type) {
+            switch type {
             case 1:
                 return "서비스 이용약관"
             case 2:
@@ -96,19 +87,14 @@ enum WebPages : URLConvertible {
         let url = URL(string: urlString)
         return url!
     }
-    
-    
-    
-    var request : URLRequest? {
+
+    var request: URLRequest? {
         let urlString = baseURL + path
         guard let url = URL(string: urlString) else { return  nil }
-        var urlRequest = URLRequest(url:url)
+        let urlRequest = URLRequest(url: url)
 //        let accessToken = Config.shared.read(key: .accessToken, initStr: "")
 //        urlRequest.addValue(accessToken, forHTTPHeaderField: "Authorization")
         
         return urlRequest
     }
-    
-
-    
 }

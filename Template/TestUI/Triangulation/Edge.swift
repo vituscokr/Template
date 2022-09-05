@@ -12,8 +12,11 @@ struct Edge {
 }
 
 extension Edge: Equatable {
-    static func ==(lhs: Edge, rhs: Edge) -> Bool {
-        return lhs.vertex1 == rhs.vertex1 && lhs.vertex2 == rhs.vertex2 || lhs.vertex1 == rhs.vertex2 && lhs.vertex2 == rhs.vertex1
+    static func == (lhs: Edge, rhs: Edge) -> Bool {
+        return lhs.vertex1 == rhs.vertex1 &&
+        lhs.vertex2 == rhs.vertex2 ||
+        lhs.vertex1 == rhs.vertex2 &&
+        lhs.vertex2 == rhs.vertex1
     }
 }
 

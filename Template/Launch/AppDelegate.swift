@@ -43,13 +43,13 @@ extension AppDelegate {
 // Info.plist Permitted background task scheduler identifiers
 // 백그라운드 패치를 초기화함
 // 가장 짧은 주기롱 옵션 설정
-//import BackgroundTasks
-//https://medium.com/hcleedev/swift-swiftui-프로젝트에-appdelegate-scenedelegate-만들기-4fa2d85191e
-//https://developer.apple.com/videos/play/wwdc2019/707/
-//https://developer.apple.com/videos/play/wwdc2019/707
-//https://www.andyibanez.com/posts/modern-background-tasks-ios13/
-//https://pokeapi.co
-//지금 이방법은 ios 13 이하에서 사용
+// import BackgroundTasks
+// https://medium.com/hcleedev/swift-swiftui-프로젝트에-appdelegate-scenedelegate-만들기-4fa2d85191e
+// https://developer.apple.com/videos/play/wwdc2019/707/
+// https://developer.apple.com/videos/play/wwdc2019/707
+// https://www.andyibanez.com/posts/modern-background-tasks-ios13/
+// https://pokeapi.co
+// 지금 이방법은 ios 13 이하에서 사용
 //        UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalMinimum)
 //        BGTaskScheduler
 //            BGTask
@@ -88,8 +88,8 @@ extension AppDelegate {
 // 이후 break 걸고
 // 콘솔에서 명령어 입력
 // e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.fetch"]
-// e -l objc -- (void)[[BGTaskScheduler sharedScheduler] _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.process"]
-        
+// e -l objc -- (void)[[BGTaskScheduler sharedScheduler]
+//    _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.process"]
     }
     
     func scheduleBackgroundFetchTask() {
@@ -111,48 +111,41 @@ extension AppDelegate {
         
         
         let request = BGProcessingTaskRequest(identifier: AppConstant.backgroundProcessIdentifier)
-        //네트워크 사용여부, 에너지 소모량 옵션도 있습니다.
+        // 네트워크 사용여부, 에너지 소모량 옵션도 있습니다.
         request.requiresNetworkConnectivity = false
         request.requiresExternalPower = true
         
         do {
             try BGTaskScheduler.shared.submit(request)
-        }catch {
+        } catch {
             print("Unable to submit task: \(error.localizedDescription)")
         }
         
     }
-    
-
     func handleAppRefreshTask(task: BGAppRefreshTask) {
         
         Debug.log(#function)
         
         task.expirationHandler = {
-            
             Debug.log("expirationHandler")
         }
         
         Debug.log("hi")
         
-        var success : Bool = true
+        let success: Bool = true
         
         task.setTaskCompleted(success: success)
     }
-    
     func handleAppProcessingTask(task: BGProcessingTask) {
         
         Debug.log(#function)
-        
         task.expirationHandler =  {
             Debug.log("expirationHander")
         }
         
         Debug.log("hi")
-        
-        var success : Bool = true
+        var success: Bool = true
         success = false
-        
         task.setTaskCompleted(success: success)
     }
 }
