@@ -17,8 +17,6 @@ struct TestTextFieldStyleView: View {
                 .textFieldStyle(LineStandardStyle(state: $fieldState,
                                                   text: $text,
                                                   placeholder: "입력폼"))
-                
-
             Button {
                 fieldState = .disable
             } label: {
