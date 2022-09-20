@@ -45,9 +45,9 @@ public class TriangulationView: UIView {
             let pixelData = CGDataProvider(data: cgImageData)?.data else { return UIColor.clear }
         
         let data = CFDataGetBytePtr(pixelData)!
-        let x = Int(point.x)
-        let y = Int(point.y)
-        let index = Int(image.size.width) * y + x
+        let pointX = Int(point.x)
+        let pointY = Int(point.y)
+        let index = Int(image.size.width) * pointY + pointX
         let expectedLengthA = Int(image.size.width * image.size.height)
         let (expectedLengthRGB, expectedLengthRGBA) = (3 * expectedLengthA, 4 * expectedLengthA)
         let numBytes = CFDataGetLength(pixelData)
@@ -76,7 +76,7 @@ public class TriangulationView: UIView {
         let bleedX = ((cellsX * cellSize) - size.width)/2
         let bleedY = ((cellsY * cellSize) - size.height)/2
         
-        let _variance = cellSize * variance / 4
+        let variance = cellSize * variance / 4
         
         var points = [Vertex]()
         let minX = -bleedX
@@ -85,12 +85,12 @@ public class TriangulationView: UIView {
         let maxY = size.height + bleedY
         
         let generator = GKLinearCongruentialRandomSource(seed: seed)
-        for i in stride(from: minX, to: maxX, by: cellSize) {
-            for j in stride(from: minY, to: maxY, by: cellSize) {
-                let x = i + CGFloat.random(cellSize / 2, cellSize * 2)/2 + CGFloat(generator.nextUniform()) + CGFloat.random(-_variance, _variance)
-                let y = j + CGFloat.random(cellSize / 2, cellSize * 2)/2 + CGFloat(generator.nextUniform()) + CGFloat.random(-_variance, _variance)
+        for index in stride(from: minX, to: maxX, by: cellSize) {
+            for verIndex in stride(from: minY, to: maxY, by: cellSize) {
+                let verX = index + CGFloat.random(cellSize / 2, cellSize * 2)/2 + CGFloat(generator.nextUniform()) + CGFloat.random(-variance, variance)
+                let verY = verIndex + CGFloat.random(cellSize / 2, cellSize * 2)/2 + CGFloat(generator.nextUniform()) + CGFloat.random(-variance, variance)
 
-                points.append(Vertex(x: Double(x), y: Double(y)))
+                points.append(Vertex(x: Double(verX), y: Double(verY)))
             }
         }
         return points

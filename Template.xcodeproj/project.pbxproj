@@ -120,6 +120,7 @@
 		A9D71BEB282E295800BCF4D7 /* TimelineInterval.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */; };
 		A9D71BEC282E296700BCF4D7 /* TimelineInterval.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		A9F1380C2824F5430055E1C7 /* CloseWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F1380B2824F5430055E1C7 /* CloseWindowView.swift */; };
+		A9F3838828C5B3E3004871B5 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F3838728C5B3E3004871B5 /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +272,7 @@
 		A9D71BE3282DF7D900BCF4D7 /* MyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyWidgetExtension.entitlements; sourceTree = "<group>"; };
 		A9D71BEA282E295800BCF4D7 /* TimelineInterval.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TimelineInterval.intentdefinition; sourceTree = "<group>"; };
 		A9F1380B2824F5430055E1C7 /* CloseWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseWindowView.swift; sourceTree = "<group>"; };
+		A9F3838728C5B3E3004871B5 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,6 +435,7 @@
 		A94CB8B3278FA48400AFFB98 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				A9F3838928C5B3EC004871B5 /* Models */,
 				A9D71BDF282DF09300BCF4D7 /* WidgetContent */,
 				A9761B462828F7DB007A0827 /* Template.entitlements */,
 				A96C7D9D281BA00900968949 /* BarcodeView.swift */,
@@ -617,6 +620,14 @@
 				A9D71BE0282DF0B800BCF4D7 /* ContentRepository.swift */,
 			);
 			path = WidgetContent;
+			sourceTree = "<group>";
+		};
+		A9F3838928C5B3EC004871B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9F3838728C5B3E3004871B5 /* NetworkMonitor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -861,6 +872,7 @@
 				732D823228127F8600EFF407 /* MyImageView.swift in Sources */,
 				A9637E83278FF9F1005E4654 /* MainView.swift in Sources */,
 				A9637E8B279001EE005E4654 /* Config.swift in Sources */,
+				A9F3838828C5B3E3004871B5 /* NetworkMonitor.swift in Sources */,
 				A96D32E728177542004E9CCE /* Candy+CoreDataClass.swift in Sources */,
 				A94122CA280FF4DE0025F8D4 /* BookView.swift in Sources */,
 				A9637E69278FEF41005E4654 /* Router.swift in Sources */,

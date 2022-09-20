@@ -22,15 +22,15 @@ struct Badge : ViewModifier {
     init(_ type: BadgesType) {
         switch(type) {
         case .pink:
-            titleColor = Color.mainpink_dark
+            titleColor = Color.mainPinkDark
             backgroundColor = Color.pinklight2
         case .purple:
             titleColor = Color.purple
-            backgroundColor = Color.purple_light
+            backgroundColor = Color.purpleLight
             
         case .green:
             titleColor = Color.green
-            backgroundColor = Color.green_light
+            backgroundColor = Color.greenLight
         case .yellow:
             titleColor = Color.yellowdark
             backgroundColor = Color.yellowlight

@@ -12,6 +12,8 @@ import Alamofire
 import SwiftyJSON
 import LSSLibrary
 
+
+
 class ConcurrencyModel : ObservableObject {
     
     private var disposeBag = Set<AnyCancellable>()
@@ -81,9 +83,9 @@ class ConcurrencyModel : ObservableObject {
                         self.photos.append(MyItem(item: photo))
                     }
                 } else {
-                    for (i,photo)  in latestPhotos.enumerated() {
+                    for (index,photo)  in latestPhotos.enumerated() {
                         
-                        if i == limit  {
+                        if index == limit  {
                             break
                         }
                         self.photos.append(MyItem(item: photo))

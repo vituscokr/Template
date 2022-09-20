@@ -5,8 +5,8 @@
 //  Created by Alex Littlejohn on 2016/01/08.
 //  Copyright © 2016 zero. All rights reserved.
 //
-
-/// Represents a bounding circle for a set of 3 vertices
+// Represents a bounding circle for a set of 3 vertices
+// swiftlint:disable identifier_name
 struct Circumcircle {
     let vertex1: Vertex
     let vertex2: Vertex

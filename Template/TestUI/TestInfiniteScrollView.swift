@@ -13,8 +13,8 @@ class InfiniteScrollModel : ObservableObject {
     
     
     init() {
-        for i in 0..<100 {
-            items.append(PageData(value: i + 100 ))
+        for index in 0..<100 {
+            items.append(PageData(value: index + 100 ))
         }
     }
     
@@ -45,9 +45,9 @@ class InfiniteScrollModel : ObservableObject {
             }
     
     
-            for i in 0..<100 {
+            for index in 0..<100 {
     
-                items.insert(PageData(value: i), at: i)
+                items.insert(PageData(value: index), at: index)
             }
     
     

@@ -61,11 +61,11 @@ class GraphView : UIView {
         var startAnglePoint:CGFloat  = (startAngle * .pi) / 180
         var angles = [(CGFloat,CGFloat, UIColor)]()
 
-        for (i,val)  in percents.enumerated() {
-            let a = (val * 360) / 100
-            let endAnglePoint = ((a + startAngle) * .pi) / 180
-            angles.append((startAnglePoint, endAnglePoint, self.colors[i]))
-            startAngle = startAngle + a
+        for (index,val)  in percents.enumerated() {
+            let temp = (val * 360) / 100
+            let endAnglePoint = ((temp + startAngle) * .pi) / 180
+            angles.append((startAnglePoint, endAnglePoint, self.colors[index]))
+            startAngle += temp
             startAnglePoint = (startAngle * .pi) / 180
         }
         

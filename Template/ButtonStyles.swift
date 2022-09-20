@@ -24,7 +24,7 @@ private extension PrimaryButton {
                 .padding()
                 .background(
                     Capsule()
-                        .fill(isEnabled ? Color.mainpink : Color.mainpink_light)
+                        .fill(isEnabled ? Color.mainpink : Color.mainPinkLight)
                 )
                 .foregroundColor(Color.white)
                 .opacity(configuration.isPressed ? 0.8 : 1.0)
@@ -50,9 +50,9 @@ private extension SecnondaryButton {
                 .padding()
                 .background(
                     Capsule()
-                        .stroke(isEnabled ? Color.mainpink : Color.mainpink_light)
+                        .stroke(isEnabled ? Color.mainpink : Color.mainPinkLight)
                 )
-                .foregroundColor(isEnabled ? Color.mainpink : Color.mainpink_light)
+                .foregroundColor(isEnabled ? Color.mainpink : Color.mainPinkLight)
                 .opacity(configuration.isPressed ? 0.8 : 1.0)
             
         }

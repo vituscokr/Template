@@ -10,7 +10,7 @@ import SwiftUI
 //https://betterprogramming.pub/wheel-picker-view-in-swiftui-6de7077b4791
 
 
-struct myVal : Equatable {
+struct MyVal : Equatable {
     let id = UUID()
     let val : String
     
@@ -28,7 +28,7 @@ struct WheelView : View {
     
     @Binding var degree : Double
     
-    let array : [myVal]
+    let array : [MyVal]
 
     let circleSize : Double
     
@@ -98,16 +98,16 @@ struct WheelView : View {
 
 struct WheelPickerView: View {
     @State var degree = 90.0
-    let array : [myVal] =  [myVal(val: "0"),
-                            myVal(val: "1"),
-                            myVal(val: "2"),
-                            myVal(val: "3"),
-                            myVal(val: "4"),
-                            myVal(val: "5"),
-                            myVal(val: "6"),
-                            myVal(val: "8"),
-                            myVal(val: "9"),
-                            myVal(val: "10")
+    let array : [MyVal] =  [MyVal(val: "0"),
+                            MyVal(val: "1"),
+                            MyVal(val: "2"),
+                            MyVal(val: "3"),
+                            MyVal(val: "4"),
+                            MyVal(val: "5"),
+                            MyVal(val: "6"),
+                            MyVal(val: "8"),
+                            MyVal(val: "9"),
+                            MyVal(val: "10")
     
     ]
 

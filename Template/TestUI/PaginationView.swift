@@ -91,9 +91,9 @@ struct PaginationView: View {
                 if model.items.count > 0 {
                     HStack {
                         TabView (selection: $currentIndex){
-                            ForEach(0..<model.items.count  , id: \.self ) { i in
+                            ForEach(0..<model.items.count  , id: \.self ) { index in
                                 
-                                PageView<PageData>(item:model.items[i])
+                                PageView<PageData>(item:model.items[index])
                             }
                         }
                         .frame(width: screenWidth)
@@ -117,10 +117,10 @@ struct PaginationView: View {
             
             HStack {
                 if model.items.count > 0 {
-                    ForEach(0..<model.items.count , id:\.self) { i   in
+                    ForEach(0..<model.items.count , id:\.self) { index   in
                         
                         Circle()
-                            .foregroundColor(currentIndex == i ? Color.red : Color.blue )
+                            .foregroundColor(currentIndex == index ? Color.red : Color.blue )
                             .frame(width: 5, height: 5, alignment: .center)
                     }
                 }

@@ -156,9 +156,9 @@ struct TestCalendarView: View {
             Text("\(year)년 \(month)월")
         
         LazyVGrid(columns: column, spacing: 0) {
-            ForEach(1...7 , id:\.self) { i in
+            ForEach(1...7 , id:\.self) { index in
                 
-                Text("\(WeekDay.getHeadTitle(from:i) ?? "" )")
+                Text("\(WeekDay.getHeadTitle(from:index) ?? "" )")
             }
             
         }

@@ -31,8 +31,8 @@ struct TestScrollViewOffsetView: View {
     var body: some View {
  
         HStack(spacing:0) {
-            ForEach(0..<5) { i in
-                Text("\(i)")
+            ForEach(0..<5) { index in
+                Text("\(index)")
                     .frame(width: imageWidth )
             }
         }
@@ -51,11 +51,11 @@ struct TestScrollViewOffsetView: View {
                     }
                     
                     
-                   let i =  Double( (offset + dragOffset) / imageWidth ).rounded(.toNearestOrEven) //몫
+                   let temp =  Double( (offset + dragOffset) / imageWidth ).rounded(.toNearestOrEven) //몫
                     
                     offset = (offset + dragOffset).remainder(dividingBy: imageWidth) //나머지 
                     
-                    Debug.log("i: \(i)")
+                    Debug.log("i: \(temp)")
                     
                     Debug.log("offset : \(offset) ")
                 

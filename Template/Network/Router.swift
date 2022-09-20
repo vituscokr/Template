@@ -67,7 +67,6 @@ enum  Router :URLConvertible {
 
 
 //
-//         eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDEiLCJhcmVhSWQiOjEsImlhdCI6MTY0OTAzNTcxMywiZXhwIjoxNjgwNTcxNzEzfQ.ql5cLS0P6nEY_nWCG9-r9obQznPXkP1oKuVFCJghxqk'
 //
 
         APIManager.shared.session.request(self, method: self.httpMethod, parameters: parameters, encoding: self.encoding, headers: self.headers)

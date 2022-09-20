@@ -72,8 +72,8 @@ struct SampleGalleryView: View {
             }
             .frame(width: itemWidth , height:itemWidth, alignment: .center)
             
-            ForEach(0..<(model.collection?.count ?? 0) , id: \.self ) { i in
-                Image(uiImage: model.images[i] )
+            ForEach(0..<(model.collection?.count ?? 0) , id: \.self ) { index in
+                Image(uiImage: model.images[index] )
                     .resizable()
                     .scaledToFill()
                     .frame(width: itemWidth, height: itemWidth, alignment: .center)

@@ -16,9 +16,14 @@ class LaunchModel : ObservableObject {
     //앱형태를 선택 합니다.
     var environment : AppEnvironment  = .develop
     
+    
+    
+    
     public init() {
         
+      //  NetworkMonitor.start()
+        
         //
-        NetworkMonitor.start()
+       // NetworkMonitor.start()
     }
 }

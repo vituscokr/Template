@@ -16,15 +16,15 @@ class ContentRepository : ObservableObject {
     func writeContents() {
         
         var contents: [WidgetContent] = []
-        for i in  1...10  {
+        for index in  1...10  {
           let content =  WidgetContent(
                 
-                name: "(\(i)",
-                cardViewSubtitle: "\(i)",
+                name: "(\(index)",
+                cardViewSubtitle: "\(index)",
                 descripitonPlainText: """
-\(i)
+\(index)
 """,
-                releaseAtDateTimeString: "\(i)")
+                releaseAtDateTimeString: "\(index)")
             
             contents.append(content)
         }
