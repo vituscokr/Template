@@ -7,9 +7,10 @@
 
 import SwiftUI
 import LSSLibrary
-
+import CoreDataConfig
+import Combine
 struct ConfigView: View {
-    @StateObject var model = ConfigModel()
+    @StateObject var model: ConfigModel = ConfigModel()
     var body: some View {
         VStack {
             ForEach(model.items) { item in
@@ -17,22 +18,22 @@ struct ConfigView: View {
                 Text(item.wrappedValue )
             }
             Button {
-                ConfigStorage.shared.add(key: "A", value: "B")
+                ConfigStorage.shared.add(key: .userId, value: "B")
             } label: {
                 Text("Add")
             }
             Button {
-                ConfigStorage.shared.delete(key: "A")
+                ConfigStorage.shared.delete(key: .userId)
             } label: {
                 Text("Delete")
             }
             Button {
-                ConfigStorage.shared.upate(key: "A", value: "C")
+                ConfigStorage.shared.upate(key: .userId, value: "C")
             } label: {
                 Text("Update")
             }
             Button {
-                let value = ConfigStorage.shared.read(key: "A")
+                let value = ConfigStorage.shared.read(key: .userId)
                 Debug.log(value)
             } label: {
                 Text("Read")
@@ -41,11 +42,11 @@ struct ConfigView: View {
         .onAppear(perform: load)
     }
     func load() {
-        for item in model.items {
-            Debug.log(item)
-            Debug.log(item.wrappedKey)
-            Debug.log(item.wrappedValue)
-        }
+        // for item in model.items {
+        //     Debug.log(item)
+        //     Debug.log(item.wrappedKey)
+        //     Debug.log(item.wrappedValue)
+        // }
     }
 }
 

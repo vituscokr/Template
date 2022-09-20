@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 class EmailValidator: ObservableObject {
-    let emailPattern = #"^\S+@\S+\.\S+S"#
+    let emailPattern = #"^\S+@\S+\.\S+$"#
     @Published var email = ""
     func isValid(_ email: String) -> Bool {
         email.range(of: emailPattern, options: .regularExpression) != nil
@@ -19,7 +19,7 @@ struct Validate: ViewModifier {
     var validator: (String) -> Bool
     func body(content: Content) -> some View {
         content
-            .border(validator(value) ? .green: .secondary)
+            .border(validator(value) ? .green: .red)
     }
 }
 extension TextField {

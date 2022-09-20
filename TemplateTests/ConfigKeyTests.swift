@@ -32,11 +32,11 @@ class ConfigKeyTests: XCTestCase {
 //            // Put the code you want to measure the time of here.
 //        }
 //    }
-    func testConfigKeys() throws {
-       let key1 = ConfigKey.keyFromString(key: "fcmToken")
-        XCTAssertEqual(key1, ConfigKey.fcmToken)
-        let key2 = ConfigKey.keyFromString(key: "fcmToke")
-        XCTAssertEqual(key2, nil)
-    }
+    // func testConfigKeys() throws {
+    //    let key1 = ConfigKey.keyFromString(key: "fcmToken")
+    //     XCTAssertEqual(key1, ConfigKey.fcmToken)
+    //     let key2 = ConfigKey.keyFromString(key: "fcmToke")
+    //     XCTAssertEqual(key2, nil)
+    // }
 
 }

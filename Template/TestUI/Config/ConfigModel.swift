@@ -2,13 +2,12 @@
 //  ConfigModel.swift
 //  Template
 //
-//  Created by vitus on 2022/04/22.
+//  Created by Gyeongtae Nam on 2022/09/20.
 //
 
 import Foundation
 import Combine
-import LSSLibrary
-
+import CoreDataConfig
 class ConfigModel: ObservableObject {
     @Published var items: [Config] = [Config]()
     private var cancellable: AnyCancellable?
