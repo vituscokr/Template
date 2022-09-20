@@ -17,6 +17,9 @@ struct TestTextFieldStyleView: View {
                 .textFieldStyle(LineStandardStyle(state: $fieldState,
                                                   text: $text,
                                                   placeholder: "입력폼"))
+                // .modifier(AppendRightButton(action: {
+                //     text = "search click"
+                // }))
             Button {
                 fieldState = .disable
             } label: {

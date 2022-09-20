@@ -50,6 +50,7 @@
 		A943B86328D99A3E00B09CAA /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943B86228D99A3E00B09CAA /* TextFieldStyle.swift */; };
 		A943B86528D99D6E00B09CAA /* TestTextFieldStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943B86428D99D6E00B09CAA /* TestTextFieldStyleView.swift */; };
 		A943B86828D9B39500B09CAA /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = A943B86728D9B39500B09CAA /* Introspect */; };
+		A943B86A28D9B86B00B09CAA /* AppendRightButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943B86928D9B86B00B09CAA /* AppendRightButton.swift */; };
 		A94CB8B5278FA48400AFFB98 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8B4278FA48400AFFB98 /* TemplateApp.swift */; };
 		A94CB8B7278FA48400AFFB98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8B6278FA48400AFFB98 /* ContentView.swift */; };
 		A94CB8B9278FA48500AFFB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94CB8B8278FA48500AFFB98 /* Assets.xcassets */; };
@@ -208,6 +209,7 @@
 		A9429D8B28D996BF009D916B /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
 		A943B86228D99A3E00B09CAA /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		A943B86428D99D6E00B09CAA /* TestTextFieldStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextFieldStyleView.swift; sourceTree = "<group>"; };
+		A943B86928D9B86B00B09CAA /* AppendRightButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppendRightButton.swift; sourceTree = "<group>"; };
 		A94CB8B1278FA48400AFFB98 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94CB8B4278FA48400AFFB98 /* TemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateApp.swift; sourceTree = "<group>"; };
 		A94CB8B6278FA48400AFFB98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -428,6 +430,7 @@
 				A9429D7A28D98BDF009D916B /* Button */,
 				A9429D7C28D98BDF009D916B /* Validators */,
 				A9429D7E28D98BDF009D916B /* Text */,
+				A943B86928D9B86B00B09CAA /* AppendRightButton.swift */,
 			);
 			path = ViewModifier;
 			sourceTree = "<group>";
@@ -930,6 +933,7 @@
 				A9637E5B278FB92F005E4654 /* ButtonStyles.swift in Sources */,
 				A9637E59278FB8BA005E4654 /* SampleButtonView.swift in Sources */,
 				A9429D8228D98BE0009D916B /* PrimaryButtonStyle.swift in Sources */,
+				A943B86A28D9B86B00B09CAA /* AppendRightButton.swift in Sources */,
 				A9637E67278FEF41005E4654 /* AuthInterceptor.swift in Sources */,
 				A96D32E528177542004E9CCE /* Country+CoreDataClass.swift in Sources */,
 				A912473528C09C530082285D /* Delaunay.swift in Sources */,
