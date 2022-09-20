@@ -47,6 +47,9 @@
 		A9429D8728D98D93009D916B /* TestViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9429D8628D98D93009D916B /* TestViewModifierView.swift */; };
 		A9429D8A28D9925D009D916B /* CoreDataConfig in Frameworks */ = {isa = PBXBuildFile; productRef = A9429D8928D9925D009D916B /* CoreDataConfig */; };
 		A9429D8C28D996BF009D916B /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9429D8B28D996BF009D916B /* ConfigModel.swift */; };
+		A943B86328D99A3E00B09CAA /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943B86228D99A3E00B09CAA /* TextFieldStyle.swift */; };
+		A943B86528D99D6E00B09CAA /* TestTextFieldStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A943B86428D99D6E00B09CAA /* TestTextFieldStyleView.swift */; };
+		A943B86828D9B39500B09CAA /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = A943B86728D9B39500B09CAA /* Introspect */; };
 		A94CB8B5278FA48400AFFB98 /* TemplateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8B4278FA48400AFFB98 /* TemplateApp.swift */; };
 		A94CB8B7278FA48400AFFB98 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CB8B6278FA48400AFFB98 /* ContentView.swift */; };
 		A94CB8B9278FA48500AFFB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94CB8B8278FA48500AFFB98 /* Assets.xcassets */; };
@@ -203,6 +206,8 @@
 		A9429D8028D98BDF009D916B /* Extensions+Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+Text.swift"; sourceTree = "<group>"; };
 		A9429D8628D98D93009D916B /* TestViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModifierView.swift; sourceTree = "<group>"; };
 		A9429D8B28D996BF009D916B /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
+		A943B86228D99A3E00B09CAA /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		A943B86428D99D6E00B09CAA /* TestTextFieldStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextFieldStyleView.swift; sourceTree = "<group>"; };
 		A94CB8B1278FA48400AFFB98 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94CB8B4278FA48400AFFB98 /* TemplateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateApp.swift; sourceTree = "<group>"; };
 		A94CB8B6278FA48400AFFB98 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -287,6 +292,7 @@
 			files = (
 				732D822128123D1C00EFF407 /* RealmSwift in Frameworks */,
 				732D821F28123D1C00EFF407 /* Realm in Frameworks */,
+				A943B86828D9B39500B09CAA /* Introspect in Frameworks */,
 				A9637E7D278FF1AD005E4654 /* LSSLibrary in Frameworks */,
 				A9429D8A28D9925D009D916B /* CoreDataConfig in Frameworks */,
 			);
@@ -356,6 +362,7 @@
 				A912472028C09AE50082285D /* Triangulation .swift */,
 				A9429D7528D988CB009D916B /* TestPhotoStyleView.swift */,
 				A9429D8628D98D93009D916B /* TestViewModifierView.swift */,
+				A943B86428D99D6E00B09CAA /* TestTextFieldStyleView.swift */,
 			);
 			path = TestUI;
 			sourceTree = "<group>";
@@ -417,6 +424,7 @@
 		A9429D7728D98BDF009D916B /* ViewModifier */ = {
 			isa = PBXGroup;
 			children = (
+				A943B86128D99A2100B09CAA /* TextField */,
 				A9429D7A28D98BDF009D916B /* Button */,
 				A9429D7C28D98BDF009D916B /* Validators */,
 				A9429D7E28D98BDF009D916B /* Text */,
@@ -446,6 +454,14 @@
 				A9429D8028D98BDF009D916B /* Extensions+Text.swift */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		A943B86128D99A2100B09CAA /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				A943B86228D99A3E00B09CAA /* TextFieldStyle.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		A94CB8A8278FA48400AFFB98 = {
@@ -694,6 +710,7 @@
 				732D821E28123D1C00EFF407 /* Realm */,
 				732D822028123D1C00EFF407 /* RealmSwift */,
 				A9429D8928D9925D009D916B /* CoreDataConfig */,
+				A943B86728D9B39500B09CAA /* Introspect */,
 			);
 			productName = Template;
 			productReference = A94CB8B1278FA48400AFFB98 /* Template.app */;
@@ -795,6 +812,7 @@
 				732D821D28123D1C00EFF407 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				A994A4EB28221056007D3D05 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 				A9429D8828D9925D009D916B /* XCRemoteSwiftPackageReference "CoreDataConfig" */,
+				A943B86628D9B39500B09CAA /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = A94CB8B2278FA48400AFFB98 /* Products */;
 			projectDirPath = "";
@@ -905,6 +923,7 @@
 				A9429D8728D98D93009D916B /* TestViewModifierView.swift in Sources */,
 				A98C55682820FF5B003072A5 /* TestCalendarView.swift in Sources */,
 				A9637E5F278FE5E1005E4654 /* Badge.swift in Sources */,
+				A943B86328D99A3E00B09CAA /* TextFieldStyle.swift in Sources */,
 				A9D71BEC282E296700BCF4D7 /* TimelineInterval.intentdefinition in Sources */,
 				A938B3352790F9F100B43CD5 /* SampleTextView.swift in Sources */,
 				A9C033DD281BB60E0028D8C0 /* GraphView.swift in Sources */,
@@ -941,6 +960,7 @@
 				A9637E5D278FE2A5005E4654 /* SampleBadgeView.swift in Sources */,
 				A912473028C09C530082285D /* Edge.swift in Sources */,
 				A98C556B2821146D003072A5 /* SlideMenuView.swift in Sources */,
+				A943B86528D99D6E00B09CAA /* TestTextFieldStyleView.swift in Sources */,
 				A9637E80278FF4DE005E4654 /* CoreConfig.swift in Sources */,
 				732D823E281281F800EFF407 /* ConfigView.swift in Sources */,
 				A912472E28C09C530082285D /* Hash.swift in Sources */,
@@ -1412,6 +1432,14 @@
 				kind = branch;
 			};
 		};
+		A943B86628D9B39500B09CAA /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		A9637E7B278FF1AD005E4654 /* XCRemoteSwiftPackageReference "LSSLibrary" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vituscokr/LSSLibrary.git";
@@ -1445,6 +1473,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9429D8828D9925D009D916B /* XCRemoteSwiftPackageReference "CoreDataConfig" */;
 			productName = CoreDataConfig;
+		};
+		A943B86728D9B39500B09CAA /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A943B86628D9B39500B09CAA /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 		A9637E7C278FF1AD005E4654 /* LSSLibrary */ = {
 			isa = XCSwiftPackageProductDependency;

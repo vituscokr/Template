@@ -14,8 +14,9 @@ struct LaunchView: View {
     var body: some View {
         NavigationView {
             if networkMonitorModel.isConnected {
-            MainView()
-                .environment(\.managedObjectContext, viewContext)
+                TestTextFieldStyleView()
+            // MainView()
+            //     .environment(\.managedObjectContext, viewContext)
            } else {
                 Text("Connet Internet")
             }
