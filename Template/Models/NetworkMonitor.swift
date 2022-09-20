@@ -16,10 +16,14 @@ public class NetworkMonitor: ObservableObject {
         monitor.pathUpdateHandler = { path in
             if path.status == .satisfied {
                 print("We're connected")
-                self.isConnected = true
+                DispatchQueue.main.async {
+                    self.isConnected = true
+                }
            } else {
                 print("No connection")
-                self.isConnected = false
+               DispatchQueue.main.async {
+                   self.isConnected = false
+               }
             }
             print(path.isExpensive)
         }
