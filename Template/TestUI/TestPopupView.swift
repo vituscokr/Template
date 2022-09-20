@@ -8,27 +8,17 @@
 import SwiftUI
 import LSSLibrary
 
-
-struct PopupCenterView : View {
-    
-    var title : String = "Title"
-    var description:String = "Description"
-    var sentences : String = "Sentencs"
-
+struct PopupCenterView: View {
+    var title: String = "Title"
+    var description: String = "Description"
+    var sentences: String = "Sentencs"
     var buttonTitle: String = "확인"
-    
-    var isCancelButton : Bool = false
-    var isDoubleButton : Bool = true
-    
-    var confirmAction : () ->()
-    
-    @State var isDisableCancel : Bool = false
-    @State var isDisableConfirm : Bool = false
-    
-    
-    
-    
-    var body :some View {
+    var isCancelButton: Bool = false
+    var isDoubleButton: Bool = true
+    var confirmAction: () -> Void
+    @State var isDisableCancel: Bool = false
+    @State var isDisableConfirm: Bool = false
+    var body: some View {
         /*
         GeometryReader { geomery in
             ZStack {
@@ -96,7 +86,7 @@ struct PopupCenterView : View {
                         }
                         .padding(.horizontal, 16)
                     }
-                    .frame(minWidth: 0, maxWidth: 327,minHeight: 0,  maxHeight: isCancelButton ?  320 : 258)
+                    .frame(minWidth: 0, maxWidth: 327,minHeight: 0,  maxHeight: isCancelButton ?  320: 258)
                     //.frame(width:327, height: 320)
 
                     //PopupEnd
@@ -106,22 +96,20 @@ struct PopupCenterView : View {
             .edgesIgnoringSafeArea(.all)
         }
    */
-        
-        EmptyView() 
-         
+        EmptyView()
          }
 }
 
 //
-//struct MyPopupView : View {
+// struct MyPopupView: View {
 //    
 //    
 //
 //    
 //    var height: CGFloat = 292 
-//    var title : String = "Title"
+//    var title: String = "Title"
 //    @State var description:String = "Description"
-//    var sentences : String = "Sentencs"
+//    var sentences: String = "Sentencs"
 //    var areaId: Int   {
 //        return  Int(Config.shared.read(key: .areaId, initStr: "1"))!
 //    }
@@ -133,19 +121,19 @@ struct PopupCenterView : View {
 //    }
 //    var buttonTitle: String = "확인"
 //    var cancelButtonTitle: String = "취소"
-//    var isCancelButton : Bool = false
-//    var isDoubleButton : Bool = true
+//    var isCancelButton: Bool = false
+//    var isDoubleButton: Bool = true
 //    
-//    var confirmAction : () ->()
-//    var cancelAction : () ->()
+//    var confirmAction: () ->()
+//    var cancelAction: () ->()
 //    
-//    @State var isDisableCancel : Bool = false
-//    @State var isDisableConfirm : Bool = false
-//    
-//    
+//    @State var isDisableCancel: Bool = false
+//    @State var isDisableConfirm: Bool = false
 //    
 //    
-//    var body :some View {
+//    
+//    
+//    var body:some View {
 //        GeometryReader { geomery in
 //            ZStack {
 //                Color.dim
@@ -179,7 +167,7 @@ struct PopupCenterView : View {
 //                                    
 //                                    if isCancelButton {
 //                                        PrimaryTextButtonView(action: {
-////                                            Debug.log("hi")
+//                                            Debug.log("hi")
 //                                        },
 //                                              buttonSize: .large,
 //                                              title: cancelButtonTitle,
@@ -211,7 +199,7 @@ struct PopupCenterView : View {
 //                        }
 //                        .padding(.horizontal, 16)
 //                    }
-//                   //isCancelButton ?  292 : 230
+//                   //isCancelButton ?  292: 230
 //                    .frame(minWidth: 0, maxWidth: 327,minHeight: 0,  maxHeight: height )
 //                    //.frame(width:327, height: 320)
 //
@@ -223,25 +211,25 @@ struct PopupCenterView : View {
 //            .edgesIgnoringSafeArea(.all)
 //            .onAppear {
 //             
-////
-////                if !message.isEmpty {
-////                    self.description  = message
-////                }
+//
+//              if !message.isEmpty {
+//                    self.description  = message
+//                }
 //            }
 //        }
 //    }
-//}
+// }
 //
 //
-//struct MyPopupView2 : View {
+// struct MyPopupView2: View {
 //    
-//    @Binding var message : String
+//    @Binding var message: String
 //
 //    
 //    var height: CGFloat = 292
-//    var title : String = "Title"
+//    var title: String = "Title"
 //    @State var description:String = "Description"
-//    var sentences : String = "Sentencs"
+//    var sentences: String = "Sentencs"
 //    var areaId: Int   {
 //        return  Int(Config.shared.read(key: .areaId, initStr: "1"))!
 //    }
@@ -253,19 +241,19 @@ struct PopupCenterView : View {
 //    }
 //    var buttonTitle: String = "확인"
 //    var cancelButtonTitle: String = "취소"
-//    var isCancelButton : Bool = false
-//    var isDoubleButton : Bool = true
+//    var isCancelButton: Bool = false
+//    var isDoubleButton: Bool = true
 //    
-//    var confirmAction : () ->()
-//    var cancelAction : () ->()
+//    var confirmAction: () ->()
+//    var cancelAction: () ->()
 //    
-//    @State var isDisableCancel : Bool = false
-//    @State var isDisableConfirm : Bool = false
-//    
-//    
+//    @State var isDisableCancel: Bool = false
+//    @State var isDisableConfirm: Bool = false
 //    
 //    
-//    var body :some View {
+//    
+//    
+//    var body:some View {
 //        GeometryReader { geomery in
 //            ZStack {
 //                Color.dim
@@ -299,7 +287,7 @@ struct PopupCenterView : View {
 //                                    
 //                                    if isCancelButton {
 //                                        PrimaryTextButtonView(action: {
-////                                            Debug.log("hi")
+//                                            Debug.log("hi")
 //                                        },
 //                                              buttonSize: .large,
 //                                              title: cancelButtonTitle,
@@ -331,7 +319,7 @@ struct PopupCenterView : View {
 //                        }
 //                        .padding(.horizontal, 16)
 //                    }
-//                   //isCancelButton ?  292 : 230
+//                   //isCancelButton ?  292: 230
 //                    .frame(minWidth: 0, maxWidth: 327,minHeight: 0,  maxHeight: height )
 //                    //.frame(width:327, height: 320)
 //
@@ -350,22 +338,19 @@ struct PopupCenterView : View {
 //            }
 //        }
 //    }
-//}
-
+// }
 struct TestPopupView: View {
-    @State var isPresentedPopupCenter :Bool = false
+    @State var isPresentedPopupCenter: Bool = false
     var body: some View {
-        
         GeometryReader { geometry in
             VStack {
-                
-                Button(action:{
+                Button {
                     isPresentedPopupCenter = true
-                }){
+                } label: {
                     Text("popup")
                 }
             }
-            .frame(width:geometry.size.width, height: geometry.size.height)
+            .frame(width: geometry.size.width, height: geometry.size.height)
 //            .modifier(Popup(isPresented: isPresentedPopupCenter, content: {
 //                PopupCenterView()
 //            }))

@@ -29,7 +29,7 @@ struct SampleConfigView: View {
                 .buttonStyle(PrimaryButton())
             }
             
-            Button("CoreConfig Save Key : testKey value : test  ") {
+            Button("CoreConfig Save Key: testKey value: test  ") {
                 Config.shared.save(key: .testKey, value: "test")
             }
             .buttonStyle(PrimaryButton())

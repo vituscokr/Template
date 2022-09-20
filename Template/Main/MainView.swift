@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct MainView: View {
-    
     @Environment(\.managedObjectContext) private var viewContext
-    
     var body: some View {
-        
         ScrollView {
-            VStack(spacing:0) {
+            VStack(spacing: 0) {
 //                NavigationLink {
 //                    TestSimpleWebView()
-//                }label : {
+//                }label: {
 //                    Text("SimpleWebView")
 //                }
 //
 //                NavigationLink {
 //                    TestLottieView()
-//                }label : {
+//                }label: {
 //                    Text("LottieView")
 //                }
 //
@@ -68,9 +65,6 @@ struct MainView: View {
 //                    Text("TEST CalendarView")
 //                }
 //
-                
-                
-
                 NavigationLink(destination: {
                     LoginView()
                 }, label: {
@@ -81,23 +75,15 @@ struct MainView: View {
                 }, label: {
                     Text("SliderMenuView" )
                 })
-                
-                
-                Button(action: {
+                Button {
                     ContentRepository().writeContents()
-                }){
+                } label: {
                     Text("ContentRepository Save")
                 }
-                
-                
                 Text("This is Test 18")
                     .applyFont(font: .bold18)
-                
                 Text("This is Test 18")
                     .applyFont(font: .regular18)
-                
-                
-                
                 NavigationLink {
                     TestInfiniteScrollView()
                 } label: {
@@ -109,34 +95,25 @@ struct MainView: View {
                 } label: {
                     Text("ScrollViewOffsetVie" )
                 }
-
-                
                 NavigationLink {
-                    TestPreferenceView(messages: ["a","b","c"])
+                    TestPreferenceView(messages: ["a", "b", "c"])
                 } label: {
                     Text("TestPreference" )
                 }
-                
                 NavigationLink {
-                   
                 TestTriangulationView()
-                }label : {
+                }label: {
                     Text("Triaulation")
                 }
-                
-                
-                
                 //
                 //            Text("This is test 18")
                 //                .applyFont(font: .bold18, underlined: true)
                 //            SampleGalleryView()
                 //            SampleConfigView()
-                
                 //            ContentView()
                 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
-        
     }
 }
 

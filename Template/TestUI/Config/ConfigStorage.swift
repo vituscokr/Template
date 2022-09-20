@@ -10,21 +10,16 @@ import CoreData
 import Combine
 import LSSLibrary
 
-class ConfigStorage : NSObject , ObservableObject {
-    
+class ConfigStorage: NSObject, ObservableObject {
     var items = CurrentValueSubject<[Config], Never>([])
-    
-    static let shared : ConfigStorage = ConfigStorage()
-    private let fetchController : NSFetchedResultsController<Config>
-    
-    private var viewContext :NSManagedObjectContext {
+    static let shared: ConfigStorage = ConfigStorage()
+    private let fetchController: NSFetchedResultsController<Config>
+    private var viewContext: NSManagedObjectContext {
         return PersistenceController.shared.container.viewContext
     }
     private override init() {
-
         let fetchRequest: NSFetchRequest<Config> = Config.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "key", ascending: true)]
-        
         fetchController = NSFetchedResultsController(
             fetchRequest: fetchRequest,
             managedObjectContext: PersistenceController.shared.container.viewContext,
@@ -32,68 +27,52 @@ class ConfigStorage : NSObject , ObservableObject {
             cacheName: nil
         )
         super.init()
-        
         fetchController.delegate = self
-        
         do {
             try fetchController.performFetch()
             items.value = fetchController.fetchedObjects ?? []
-        }catch {
-            Debug.log("Error : could not fetch objets ")
+        } catch {
+            Debug.log("Error: could not fetch objets ")
         }
     }
-    func read(key : String ) -> String {
-        let objects = fetchController.fetchedObjects?.filter{
+    func read(key: String ) -> String {
+        let objects = fetchController.fetchedObjects?.filter {
             $0.key == key
         }
         guard let object  = objects?.first else {
             return ""
         }
-        
-        
         return object.wrappedValue
-        
     }
-    func add(key:String, value:String ) {
+    func add(key: String, value: String ) {
         let viewContext = fetchController.managedObjectContext
-        
         let config = Config(context: viewContext)
         config.key = key
         config.value = value
         do {
             try viewContext.save()
-        }catch {
+        } catch {
             print(error.localizedDescription)
-            
         }
     }
-    
-    func upate(key: String, value:String)  {
+    func upate(key: String, value: String) {
         let viewContext = fetchController.managedObjectContext
-
-        let objects = fetchController.fetchedObjects?.filter{
+        let objects = fetchController.fetchedObjects?.filter {
             $0.key == key
         }
-        
         guard let object  = objects?.first else {
             return
         }
-        
         object.value = value
         do {
             try viewContext.save()
-        }catch {
+        } catch {
             print(error.localizedDescription)
-            
         }
-        
     }
-    
-    func delete(key:String ) {
-        
+    func delete(key: String ) {
         let viewContext = fetchController.managedObjectContext
-
-        let objects = fetchController.fetchedObjects?.filter{
+        let objects = fetchController.fetchedObjects?.filter {
             $0.key == key
         }
         guard let array  = objects else {
@@ -104,22 +83,16 @@ class ConfigStorage : NSObject , ObservableObject {
         }
         do {
             try viewContext.save()
-        }catch {
+        } catch {
             Debug.log(error.localizedDescription)
         }
-
-        
     }
 }
-
-
-extension ConfigStorage : NSFetchedResultsControllerDelegate {
+extension ConfigStorage: NSFetchedResultsControllerDelegate {
     public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        
         guard let items = controller.fetchedObjects as? [Config] else {
             return
         }
         self.items.value = items
     }
 }
-

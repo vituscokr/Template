@@ -13,17 +13,14 @@ struct Vertex: Hashable {
         self.x = x
         self.y = y
     }
-    
     func pointValue() -> CGPoint {
         return CGPoint(x: x, y: y)
     }
-    
     let x: Double
     let y: Double
 }
-
-extension Vertex: Equatable { 
-    static public func ==(lhs: Vertex, rhs: Vertex) -> Bool {
+extension Vertex: Equatable {
+    static public func == (lhs: Vertex, rhs: Vertex) -> Bool {
         return lhs.x == rhs.x && lhs.y == rhs.y
     }
 }
@@ -31,13 +28,9 @@ extension Vertex: Equatable {
 extension Array where Element: Equatable {
     func removeDuplicates() -> [Element] {
         var result = [Element]()
-        
-        for value in self {
-            if result.contains(value) == false {
+        for value in self where !result.contains(value) {
                 result.append(value)
-            }
         }
-        
         return result
     }
 }

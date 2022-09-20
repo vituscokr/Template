@@ -8,17 +8,13 @@
 import SwiftUI
 import LSSLibrary
 
-class InfiniteScrollModel : ObservableObject {
+class InfiniteScrollModel: ObservableObject {
     @Published var items = [PageData]()
-    
-    
     init() {
         for index in 0..<100 {
             items.append(PageData(value: index + 100 ))
         }
     }
-    
-    
 //    func testInset() -> Int  {
 //
 //
@@ -36,95 +32,56 @@ class InfiniteScrollModel : ObservableObject {
 //
 //
 //    }
-    
-        func testInset() -> PageData?  {
-    
-    
+        func testInset() -> PageData? {
             guard let data = items.first else {
                 return nil
             }
-    
-    
             for index in 0..<100 {
-    
                 items.insert(PageData(value: index), at: index)
             }
-    
-    
             return data
-    
-    
-    
-    
         }
-    
 }
 
-struct InfiniteScrollView : View {
-    
-    
-    @EnvironmentObject var model : InfiniteScrollModel
-    
-    
-    var body : some View {
-        VStack(spacing:0) {
+struct InfiniteScrollView: View {
+    @EnvironmentObject var model: InfiniteScrollModel
+    var body: some View {
+        VStack(spacing: 0) {
             ScrollViewReader { proxy in
                 ScrollView {
-                    VStack(spacing:0) {
+                    VStack(spacing: 0) {
                       //  ForEach(Array(model.items.enumerated()) , id: \.offset ) { (i, item) in
-                            
                         ForEach(model.items) { item in
                             Text(String(item.value))
                                 .id(item.id.uuidString)
-                            
-                            
                         }
                     }
                 }
-                
                 Button {
-                    
                     guard let item = model.testInset() else {
                         return
                     }
-                        
                     DispatchQueue.main.async {
                         proxy.scrollTo(item.id.uuidString, anchor: .top )
                     }
-
-                    
-                    
-                    
 //                    let id =  model.testInset()
 //                    Debug.log(id)
 //                    DispatchQueue.main.async {
 //                        proxy.scrollTo(id, anchor: .top )
 //                    }
-                    
                 } label: {
                     Text("INSERT")
                 }
-                
             }
         }
-        
-        
     }
 }
 
 struct TestInfiniteScrollView: View {
-    
-    @StateObject var model : InfiniteScrollModel = InfiniteScrollModel()
-    
-    
+    @StateObject var model: InfiniteScrollModel = InfiniteScrollModel()
     var body: some View {
-        
-        
         InfiniteScrollView()
             .environmentObject(model)
-        
-        
-        
     }
 }
 

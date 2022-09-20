@@ -11,31 +11,24 @@ import LSSLibrary
 
 struct CountryListView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) var countries : FetchedResults<Country>
-    
+    @FetchRequest(sortDescriptors: []) var countries: FetchedResults<Country>
     var body: some View {
         VStack {
             List {
-                ForEach(countries, id:\.self) { country in
-                    
+                ForEach(countries, id: \.self) { country in
                     Section(country.wrappedFullName) {
-                        
                         ForEach(country.candyArray, id: \.self) { candy in
                             Text(candy.warppedName)
                         }
-                       
                     }
                 }
             }.onAppear(perform: load)
-            
             Button("Add") {
 //                let candy = Candy(context: viewContext)
 //                candy.name = "Mars"
 //                candy.origin = Country(context: viewContext)
 //                candy.origin?.shortName = "UK"
 //                candy.origin?.fullName = "United Kingdom"
-                
-                
                 let candy2 = Candy(context: viewContext)
                 candy2.name = "KitKat"
                 candy2.origin = Country(context: viewContext)
@@ -53,23 +46,13 @@ struct CountryListView: View {
                 candy4.origin = Country(context: viewContext)
                 candy4.origin?.shortName = "CH"
                 candy4.origin?.fullName = "Switzerland"
-                
-                
-                
                 try? viewContext.save()
-                
-                
-                
             }
         }
     }
-    
-    
     func load() {
         for country in countries {
-            
             Debug.log(country.candyArray)
-            
         }
     }
 }

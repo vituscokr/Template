@@ -8,18 +8,14 @@
 import Foundation
 import SwiftUI
 import LSSLibrary
-
-
-class AppDelegate : NSObject, UIApplicationDelegate, ObservableObject, UNUserNotificationCenterDelegate {
-    
+class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject, UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil)
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil)
     -> Bool {
         saveDeviceId()
         setupBackgroundRegister()
         return true
     }
-    
     func application(_ application: UIApplication,
                      supportedInterfaceOrientationsFor window: UIWindow?)
     -> UIInterfaceOrientationMask {
@@ -69,7 +65,6 @@ extension AppDelegate {
                 }
                 self.handleAppRefreshTask(task: task)
         }
-        
         BGTaskScheduler.shared.register(
             forTaskWithIdentifier: AppConstant.backgroundProcessIdentifier,
             using: nil) { task in
@@ -79,11 +74,9 @@ extension AppDelegate {
             self.handleAppProcessingTask(task: task )
         }
     }
-    
     func scheduleBackground() {
         scheduleBackgroundFetchTask()
         scheduleBackgroundProcessingTask()
-        
 // 해당 라인 위에 브레이크를 걸어주세요.
 // 이후 break 걸고
 // 콘솔에서 명령어 입력
@@ -91,11 +84,8 @@ extension AppDelegate {
 // e -l objc -- (void)[[BGTaskScheduler sharedScheduler]
 //    _simulateLaunchForTaskWithIdentifier:@"kr.dobuled.Test.process"]
     }
-    
     func scheduleBackgroundFetchTask() {
-        
         Debug.log(#function)
-        
         let request = BGAppRefreshTaskRequest(identifier: AppConstant.backgroundFetchIdentifier)
         request.earliestBeginDate = Date(timeIntervalSinceNow: 1 * 60)
         do {
@@ -104,45 +94,32 @@ extension AppDelegate {
             print("Unable to submit task: \(error.localizedDescription)")
         }
     }
-    
     func scheduleBackgroundProcessingTask() {
-        
         Debug.log(#function)
-        
-        
         let request = BGProcessingTaskRequest(identifier: AppConstant.backgroundProcessIdentifier)
         // 네트워크 사용여부, 에너지 소모량 옵션도 있습니다.
         request.requiresNetworkConnectivity = false
         request.requiresExternalPower = true
-        
         do {
             try BGTaskScheduler.shared.submit(request)
         } catch {
             print("Unable to submit task: \(error.localizedDescription)")
         }
-        
     }
     func handleAppRefreshTask(task: BGAppRefreshTask) {
-        
         Debug.log(#function)
-        
         task.expirationHandler = {
             Debug.log("expirationHandler")
         }
-        
         Debug.log("hi")
-        
         let success: Bool = true
-        
         task.setTaskCompleted(success: success)
     }
     func handleAppProcessingTask(task: BGProcessingTask) {
-        
         Debug.log(#function)
-        task.expirationHandler =  {
+        task.expirationHandler = {
             Debug.log("expirationHander")
         }
-        
         Debug.log("hi")
         var success: Bool = true
         success = false

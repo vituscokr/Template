@@ -20,17 +20,12 @@ import LSSLibrary
 ///     let x1 = 0.75 * q + r
 ///     // x1 == 8.625
 
-
 struct TestScrollViewOffsetView: View {
-    
     @State private var dragOffset = CGFloat.zero
     @State private var offset = CGFloat.zero
-    
-    
     let imageWidth: CGFloat = UIScreen.main.bounds.width
     var body: some View {
- 
-        HStack(spacing:0) {
+        HStack(spacing: 0) {
             ForEach(0..<5) { index in
                 Text("\(index)")
                     .frame(width: imageWidth )
@@ -39,28 +34,18 @@ struct TestScrollViewOffsetView: View {
         .offset(x: offset + dragOffset)
         .gesture(
             DragGesture()
-                .onChanged({ value in
-
+                .onChanged({ _ in
                 })
                 .onEnded({ value in
                     withAnimation(.easeOut) {
                         dragOffset = value.predictedEndTranslation.width
-                        
-                        Debug.log("end : \(dragOffset)")
-                        
+                        Debug.log("end: \(dragOffset)")
                     }
-                    
-                    
-                   let temp =  Double( (offset + dragOffset) / imageWidth ).rounded(.toNearestOrEven) //몫
-                    
-                    offset = (offset + dragOffset).remainder(dividingBy: imageWidth) //나머지 
-                    
+                   let temp =  Double( (offset + dragOffset) / imageWidth ).rounded(.toNearestOrEven) // 몫
+                    offset = (offset + dragOffset).remainder(dividingBy: imageWidth) // 나머지
                     Debug.log("i: \(temp)")
-                    
-                    Debug.log("offset : \(offset) ")
-                
+                    Debug.log("offset: \(offset) ")
                     dragOffset = 0
-                  
                 })
         )
     }

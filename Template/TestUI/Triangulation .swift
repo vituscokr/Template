@@ -11,38 +11,31 @@ import LSSLibrary
 
 extension UIImage {
 
-    func resize(size:CGSize) -> UIImage {
+    func resize(size: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(size)
-        self.draw(in:CGRect(x: 0, y: 0, width: size.width, height: size.height))
-        let scaled : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+        let scaled: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return scaled
     }
 }
 
-struct TriangulrView : UIViewRepresentable {
-    
+struct TriangulrView: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
-        
         Debug.log(UIScreen.main.bounds.size)
-        
-        let view = TriangulationView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width), image: UIImage(named: "sample")!)
-        
+        let view = TriangulationView(frame: CGRect(x: 0,
+                                                   y: 0,
+                                                   width: UIScreen.main.bounds.width,
+                                                   height: UIScreen.main.bounds.width),
+                                     image: UIImage(named: "sample")!)
         return view
     }
-    
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
     }
 }
-
-
 struct TestTriangulationView: View {
     var body: some View {
-
-        
         TriangulrView()
-        
     }
 }
 

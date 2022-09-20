@@ -9,7 +9,7 @@ import XCTest
 import SwiftUI
 import ViewInspector
 
-//ViewInspector spm github 주소
+// ViewInspector spm github 주소
 // https://github.com/nalexn/ViewInspector
 
 @testable import Template
@@ -29,18 +29,15 @@ class TemplateTests: XCTestCase {
 //        // Use XCTAssert and related functions to verify your tests produce the correct results.
 //        // Any test you write for XCTest can be annotated as throws and async.
 //        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-//        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+//        // Mark your test async to allow awaiting for asynchronous code to complete.
+//        Check the results with assertions afterwards.
 //    }
-    
     func testViewInspectorBaseline() throws {
         let expected = "It lives"
         let sut = Text(expected)
         let value = try sut.inspect().text().string()
-        
         XCTAssertEqual(value, expected)
-        
     }
-    
     /*
     func testLoginDefaultText() throws {
         

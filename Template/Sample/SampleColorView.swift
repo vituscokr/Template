@@ -7,57 +7,49 @@
 
 import SwiftUI
 
-struct SampleColor :Identifiable{
+struct SampleColor: Identifiable {
     var id: UUID = UUID()
-    var name:String
-    var color : Color
+    var name: String
+    var color: Color
 }
 
 struct SampleColorView: View {
-    
-    
-    
     @State var items = [
-        SampleColor(name: "graydark4" , color: .graydark4),
-        SampleColor(name: "graydark3" , color: .graydark3),
-        SampleColor(name: "darkgray2" , color: .darkgray2),
-        SampleColor(name: "graydark1" , color: .graydark1),
-        SampleColor(name: "gray0" , color: .gray0),
-        SampleColor(name: "graylight2" , color: .graylight2),
-        SampleColor(name: "graylight1" , color: .graylight1),
-        SampleColor(name: "graylight" , color: .graylight),
-        SampleColor(name: "mainpink_dark" , color: .mainPinkDark),
-        SampleColor(name: "mainpink" , color: .mainpink),
-        SampleColor(name: "mainpink_light" , color: .mainPinkLight),
-        SampleColor(name: "pinklight1" , color: .pinklight1),
-        SampleColor(name: "active" , color: .active),
-        SampleColor(name: "purpledark" , color: .purpledark),
-        SampleColor(name: "purple" , color: .purple),
-        SampleColor(name: "purple_light" , color: .purpleLight),
-        SampleColor(name: "green" , color: .green),
-        SampleColor(name: "green_light2" , color: .greenLight2),
-        SampleColor(name: "green_light" , color: .greenLight),
-        SampleColor(name: "yellowdark" , color: .yellowdark),
-        SampleColor(name: "yellow" , color: .yellow),
-        SampleColor(name: "yellowlight" , color: .yellowlight)
+        SampleColor(name: "graydark4", color: .graydark4),
+        SampleColor(name: "graydark3", color: .graydark3),
+        SampleColor(name: "darkgray2", color: .darkgray2),
+        SampleColor(name: "graydark1", color: .graydark1),
+        SampleColor(name: "gray0", color: .gray0),
+        SampleColor(name: "graylight2", color: .graylight2),
+        SampleColor(name: "graylight1", color: .graylight1),
+        SampleColor(name: "graylight", color: .graylight),
+        SampleColor(name: "mainpink_dark", color: .mainPinkDark),
+        SampleColor(name: "mainpink", color: .mainpink),
+        SampleColor(name: "mainpink_light", color: .mainPinkLight),
+        SampleColor(name: "pinklight1", color: .pinklight1),
+        SampleColor(name: "active", color: .active),
+        SampleColor(name: "purpledark", color: .purpledark),
+        SampleColor(name: "purple", color: .purple),
+        SampleColor(name: "purple_light", color: .purpleLight),
+        SampleColor(name: "green", color: .green),
+        SampleColor(name: "green_light2", color: .greenLight2),
+        SampleColor(name: "green_light", color: .greenLight),
+        SampleColor(name: "yellowdark", color: .yellowdark),
+        SampleColor(name: "yellow", color: .yellow),
+        SampleColor(name: "yellowlight", color: .yellowlight)
 
     ]
     var body: some View {
         ScrollView {
             VStack {
-                
                 ForEach(items) { item in
                     VStack {
                        Circle()
                             .fill(item.color)
-                            .frame(height:50)
+                            .frame(height: 50)
                         Text(item.name)
                     }
-                    
                 }
-                
-                
-
 //                HStack{
 //                    Color.graydark3
 //                    Text("graydark3")
@@ -157,7 +149,6 @@ struct SampleColorView: View {
 //                    Text("yellowlight")
 //
 //                }
-                
             }
         }
     }
@@ -168,31 +159,3 @@ struct SampleColorView_Previews: PreviewProvider {
         SampleColorView()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

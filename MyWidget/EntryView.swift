@@ -9,17 +9,11 @@ import SwiftUI
 
 struct EntryView: View {
 //    @Environment(\.widgetFamily) var family
-    
-    let model : WidgetContent
-    
-    
-    
-    
+    let model: WidgetContent
 //    init(model: WidgetContent) {
 //        self.model = model
 //    }
     var body: some View {
-        
 //        switch family {
 //        case .systemSmall:
 //        case .systemMedium:
@@ -40,28 +34,20 @@ struct EntryView: View {
                         .foregroundColor(Color.red)
                     Spacer()
                 }
-
-                
-                
                 Text(model.cardViewSubtitle)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .lineLimit(nil)
                     .foregroundColor(Color.green)
-                
                 Text(model.descripitonPlainText)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .lineLimit(2)
                     .lineSpacing(3)
                     .foregroundColor(Color.blue)
-                
                 Text(model.releaseAtDateTimeString)
                     .font(.system(size: 12, weight: .regular, design: .default))
                     .lineLimit(1)
                     .foregroundColor(Color.yellow)
-                
                 Spacer()
-                
-                
             }
             .background(Color.gray)
             .padding()
@@ -70,13 +56,11 @@ struct EntryView: View {
             .preferredColorScheme(.light)
             .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
         }
-
-        
     }
 }
 
-//struct EntryView_Previews: PreviewProvider {
+// struct EntryView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        EntryView(model: snapshotEntry)
 //    }
-//}
+// }

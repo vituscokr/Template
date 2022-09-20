@@ -15,7 +15,6 @@ enum ConfigKey: String, CaseIterable {
     case refreshTokenExpire
     case deviceId
     case testKey
-    
     static func keyFromString (key: String ) -> ConfigKey? {
         guard let configKey  = ConfigKey.allCases.filter({ configkey  in
             configkey.rawValue == key

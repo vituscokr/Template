@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Candy {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Candy> {
@@ -18,13 +17,12 @@ extension Candy {
 
     @NSManaged public var name: String?
     @NSManaged public var origin: Country?
-    
-    public var warppedName : String {
+    public var warppedName: String {
         name ?? "Unknown Candy"
     }
 
 }
 
-extension Candy : Identifiable {
+extension Candy: Identifiable {
 
 }

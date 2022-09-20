@@ -9,53 +9,35 @@ import SwiftUI
 import LSSLibrary
 
 struct TestMyFileView: View {
-    
-    @State var path : String?
+    @State var path: String?
     var body: some View {
-
         VStack {
-            
-            Button(action: {
-                
-                
-                guard let data = UIImage(named:"17eb274c3fe48b902")?.pngData() else {
+            Button {
+                guard let data = UIImage(named: "17eb274c3fe48b902")?.pngData() else {
                     return
                 }
-                
                 let myFile = MyFile(filename: "test")
                 myFile.saveTemp(data: data)
-                
-                
                 path = myFile.filePath
-                
-            }) {
+            } label: {
                 Text("파일 저장")
             }
-            
-            Button(action: {
-                
-                
+            Button {
                 let myFile = MyFile(filename: "test")
-                
                 myFile.removeFile(url: myFile.filePath)
-
                 path = ""
-                
-            }) {
+            } label: {
                 Text("파일 삭제")
             }
-            
-            
-            AsyncImage(url: URL(fileURLWithPath: path ?? "" )){ phase in
-                switch(phase) {
-                case .empty : // placeholder
+            AsyncImage(url: URL(fileURLWithPath: path ?? "" )) { phase in
+                switch phase {
+                case .empty: // placeholder
                     Text("loading")
-                case .success(let image) :
+                case .success(let image):
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                    
-                case .failure (let error) :
+                case .failure(let error):
                     VStack {
                         Image(systemName: "exclamationmark.triangle.fill")
                             .foregroundColor(.orange)
@@ -67,10 +49,7 @@ struct TestMyFileView: View {
                     EmptyView()
                 }
             }
-            .frame(width:200, height:200)
-            
-            
-            
+            .frame(width: 200, height: 200)
         }
     }
 }

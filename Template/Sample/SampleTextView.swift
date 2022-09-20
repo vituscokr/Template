@@ -10,7 +10,7 @@ import SwiftUI
 struct SampleTextView: View {
     var body: some View {
         VStack {
-            ForEach(TextStyleType.allCases, id:\.self) { type in
+            ForEach(TextStyleType.allCases, id: \.self) { type in
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                     .modifier(TextStyle(type: type))
             }

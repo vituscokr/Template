@@ -9,10 +9,9 @@ import SwiftUI
 
 struct BookContainerView: View {
     @StateObject var book  = Book()
-    
     var body: some View {
-        EmptyView() 
-        //BookView(model: book)
+        EmptyView()
+        // BookView(model: book)
     }
 }
 

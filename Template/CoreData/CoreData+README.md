@@ -1,5 +1,5 @@
 
-참고 : https://www.hackingwithswift.com/books/ios-swiftui/one-to-many-relationships-with-core-data-swiftui-and-fetchrequest
+참고: https://www.hackingwithswift.com/books/ios-swiftui/one-to-many-relationships-with-core-data-swiftui-and-fetchrequest
 
 
 Make sure you run that code, because it works really well – all our candy bars are automatically sorted into sections when the Add button is tapped. Even better, because we did all the heavy lifting inside our NSManagedObject subclasses, the resulting SwiftUI code is actually remarkably straightforward – it has no idea that an NSSet is behind the scenes, and is much easier to understand as a result.

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PrimaryButton : ButtonStyle {
+struct PrimaryButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         PrimaryButtonView(configuration: configuration)
     }
@@ -17,24 +17,20 @@ private extension PrimaryButton {
     struct PrimaryButtonView: View {
         @Environment(\.isEnabled) var isEnabled
         let configuration: PrimaryButton.Configuration
-        
-        var body :some View {
+        var body: some View {
             return configuration.label
                 .font(.system(size: 16, weight: .regular, design: .default))
                 .padding()
                 .background(
                     Capsule()
-                        .fill(isEnabled ? Color.mainpink : Color.mainPinkLight)
+                        .fill(isEnabled ? Color.mainpink: Color.mainPinkLight)
                 )
                 .foregroundColor(Color.white)
-                .opacity(configuration.isPressed ? 0.8 : 1.0)
-            
+                .opacity(configuration.isPressed ? 0.8: 1.0)
         }
     }
 }
-
-
-struct SecnondaryButton : ButtonStyle {
+struct SecnondaryButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         SecnondaryButtonView(configuration: configuration)
     }
@@ -43,24 +39,20 @@ private extension SecnondaryButton {
     struct SecnondaryButtonView: View {
         @Environment(\.isEnabled) var isEnabled
         let configuration: PrimaryButton.Configuration
-        
-        var body :some View {
+        var body: some View {
             return configuration.label
                 .font(.system(size: 16, weight: .regular, design: .default))
                 .padding()
                 .background(
                     Capsule()
-                        .stroke(isEnabled ? Color.mainpink : Color.mainPinkLight)
+                        .stroke(isEnabled ? Color.mainpink: Color.mainPinkLight)
                 )
-                .foregroundColor(isEnabled ? Color.mainpink : Color.mainPinkLight)
-                .opacity(configuration.isPressed ? 0.8 : 1.0)
-            
+                .foregroundColor(isEnabled ? Color.mainpink: Color.mainPinkLight)
+                .opacity(configuration.isPressed ? 0.8: 1.0)
         }
     }
 }
-
-
-struct DarkButton : ButtonStyle {
+struct DarkButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         DarkButtonView(configuration: configuration)
     }
@@ -69,18 +61,16 @@ private extension DarkButton {
     struct DarkButtonView: View {
         @Environment(\.isEnabled) var isEnabled
         let configuration: PrimaryButton.Configuration
-        
-        var body :some View {
+        var body: some View {
             return configuration.label
                 .font(.system(size: 16, weight: .regular, design: .default))
                 .padding()
                 .background(
                     Capsule()
-                        .fill(isEnabled ? Color.darkgray2 : Color.graylight1)
+                        .fill(isEnabled ? Color.darkgray2: Color.graylight1)
                 )
                 .foregroundColor(Color.white)
-                .opacity(configuration.isPressed ? 0.8 : 1.0)
-            
+                .opacity(configuration.isPressed ? 0.8: 1.0)
         }
     }
 }

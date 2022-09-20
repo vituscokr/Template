@@ -7,18 +7,19 @@
 import SwiftUI
 
 struct MyImageView: View {
-    @State var url : String  = "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03373/opgs/edr/ncam/NRB_696919762EDR_S0930000NCAM00594M_.JPG"
+    @State var url: String  = ""
+    // "https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/03373/
+    // opgs/edr/ncam/NRB_696919762EDR_S0930000NCAM00594M_.JPG"
     var body: some View {
         AsyncImage(url: URL(string: url)) { phase in
-            switch(phase) {
-            case .empty : // placeholder
+            switch phase {
+            case .empty: // placeholder
                 Text("loading")
-            case .success(let image) :
+            case .success(let image):
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                
-            case .failure (let error) :
+            case .failure(let error):
                 VStack {
                     Image(systemName: "exclamationmark.triangle.fill")
                         .foregroundColor(.orange)

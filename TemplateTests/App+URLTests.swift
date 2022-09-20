@@ -25,15 +25,14 @@ class AppURLTests: XCTestCase {
 //        let expectedDocument = "file:///Users/gyeongtaenam/Library/Developer/CoreSimulator/Devices
 //        /A5CA8BCE-73DD-4F98-A27E-19F9953C8393/data/Containers/Data/Application/
 //        C1A78432-7D21-4F1F-AE22-1411846ACADE/Documents/"
-        
         let expectedCache = "Caches"
         let expectedDocument = "Documents"
         let cache = AppURLs.cacheDirectory()
 
         let doc = AppURLs.documentDirectory()
 
-        XCTAssertEqual(cache.lastPathComponent , expectedCache)
-        XCTAssertEqual(doc.lastPathComponent , expectedDocument)
+        XCTAssertEqual(cache.lastPathComponent, expectedCache)
+        XCTAssertEqual(doc.lastPathComponent, expectedDocument)
     }
 
 //    func testPerformanceExample() throws {

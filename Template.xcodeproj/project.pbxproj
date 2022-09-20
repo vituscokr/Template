@@ -88,7 +88,7 @@
 		A9761B342828CF21007A0827 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9761B1F2828CE2A007A0827 /* SwiftUI.framework */; };
 		A9761B372828CF21007A0827 /* MyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9761B362828CF21007A0827 /* MyWidget.swift */; };
 		A9761B392828CF22007A0827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9761B382828CF22007A0827 /* Assets.xcassets */; };
-		A9761B3D2828CF22007A0827 /* MyWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A9761B322828CF21007A0827 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A9761B3D2828CF22007A0827 /* MyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A9761B322828CF21007A0827 /* MyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A9761B422828DBD0007A0827 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9761B412828DBD0007A0827 /* WidgetContent.swift */; };
 		A9761B432828DBD0007A0827 /* WidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9761B412828DBD0007A0827 /* WidgetContent.swift */; };
 		A9761B452828DC2E007A0827 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9761B442828DC2E007A0827 /* EntryView.swift */; };
@@ -148,15 +148,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A9761B2A2828CE2A007A0827 /* Embed App Extensions */ = {
+		A9761B2A2828CE2A007A0827 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				A9761B3D2828CF22007A0827 /* MyWidgetExtension.appex in Embed App Extensions */,
+				A9761B3D2828CF22007A0827 /* MyWidgetExtension.appex in Embed Foundation Extensions */,
 			);
-			name = "Embed App Extensions";
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -640,7 +640,7 @@
 				A94CB8AD278FA48400AFFB98 /* Sources */,
 				A94CB8AE278FA48400AFFB98 /* Frameworks */,
 				A94CB8AF278FA48400AFFB98 /* Resources */,
-				A9761B2A2828CE2A007A0827 /* Embed App Extensions */,
+				A9761B2A2828CE2A007A0827 /* Embed Foundation Extensions */,
 				A922E5B728C1857800B2B9EC /* ShellScript */,
 			);
 			buildRules = (
@@ -722,7 +722,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					A94CB8B0278FA48400AFFB98 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -807,6 +807,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		A922E5B728C1857800B2B9EC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

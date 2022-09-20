@@ -10,7 +10,7 @@ import SwiftUI
 /*
 import Realm
 
-class RConfig :Object ,ObjectKeyIdentifiable{
+class RConfig:Object ,ObjectKeyIdentifiable{
     @Persisted (primaryKey: true) var key = ""
     @Persisted var value = ""
 }
@@ -21,9 +21,9 @@ class Config {
     private lazy var configure  = {
         return Realm.Configuration(objectTypes: [RConfig.self])
     }()
-    public var realm :Realm? {
+    public var realm:Realm? {
         
-        var realm : Realm?
+        var realm: Realm?
         do {
             realm = try Realm(configuration:configure)
         }catch {
@@ -47,7 +47,7 @@ class Config {
                // config.key = key.rawValue
                 config.value = value
             }
-        }else {
+       } else {
             let config = RConfig()
             config.key = key.rawValue
             config.value = value
@@ -68,7 +68,7 @@ class Config {
         
     }
     
-    func del(_ key : ConfigKey ) {
+    func del(_ key: ConfigKey ) {
         guard let config = getObject(key: key) else {
             return
         }

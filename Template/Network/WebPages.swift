@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 
-
 // if let url = URL(string: AppConstant.serverURL + "/page/signup/phone-auth") {
 //
 //    Debug.log(url)
@@ -16,20 +15,20 @@ import Alamofire
 //    webView?.load(urlRequest)
 // }
 
-enum WebPages : URLConvertible {
+enum WebPages: URLConvertible {
     // (pg계약전까지 흰 페이지만 뜸)핸드폰 본인인증 페이지 가져오기
     case phoneAuth
     /// 영수증 웹페이지
     case receipt(String)
     /// 결제용 웹페이지
     case payment(String)
-    ///이용약관 웹페이지 (약관 타입[1: 서비스 이용약관, 2:개인정보처리방침, 3:개인정보 수집 및 이용동의서, 4: 마케팅 활용 수신 동의 및 광고성 정보 전송 동의서]
+    /// 이용약관 웹페이지 (약관 타입[1: 서비스 이용약관, 2:개인정보처리방침, 3:개인정보 수집 및 이용동의서, 4: 마케팅 활용 수신 동의 및 광고성 정보 전송 동의서]
     case agreement(Int)
     case companyInfo
     case refund
     case productInfo
 
-    var baseURL : String {
+    var baseURL: String {
         return ""
 //        switch(AppConstant.environment) {
 //        case .develop:
@@ -41,7 +40,7 @@ enum WebPages : URLConvertible {
 //        }
     }
     var path: String {
-        switch self  {
+        switch self {
         case .phoneAuth: return "/page/signup/phone-auth"
         case .receipt(let jobId): return "/page/receipt?job_id=\(jobId)"
         case .payment(let orderNo): return "/page/payment/request?order_no=\(orderNo)"
@@ -60,7 +59,7 @@ enum WebPages : URLConvertible {
             return "수수다 영수증"
         case .payment:
             return ""
-        case .agreement(let type) :
+        case .agreement(let type):
             switch type {
             case 1:
                 return "서비스 이용약관"
@@ -81,7 +80,6 @@ enum WebPages : URLConvertible {
             return "상품 제공 고시"
         }
     }
-    
     func asURL() throws -> URL {
         let urlString = baseURL + path
         let url = URL(string: urlString)
@@ -94,7 +92,6 @@ enum WebPages : URLConvertible {
         let urlRequest = URLRequest(url: url)
 //        let accessToken = Config.shared.read(key: .accessToken, initStr: "")
 //        urlRequest.addValue(accessToken, forHTTPHeaderField: "Authorization")
-        
         return urlRequest
     }
 }

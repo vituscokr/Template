@@ -9,21 +9,15 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
-class AuthInterceptor : RequestInterceptor {
-    
+class AuthInterceptor: RequestInterceptor {
     let retryLimit = 1
     let retryDelay: TimeInterval = 0
-    
     func adapt(_ urlRequest: URLRequest,
                for session: Session,
                completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        
         let urlRequest = urlRequest
-        
 //        let accessToken = Config.shared.read(.accessToken)
 //        let deviceId = Config.shared.read(.deviceId)
-        
 //        urlRequest.setValue("\(accessToken)", forHTTPHeaderField: "Authorization")
 //        urlRequest.setValue("\(deviceId)", forHTTPHeaderField: "device-id")
         completion(.success(urlRequest))

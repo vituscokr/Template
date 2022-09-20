@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-//import YDNDUI
+// import YDNDUI
 //
 //
-//struct TestFeatureView: View {
+// struct TestFeatureView: View {
 //    
 //    
-//    var imagebundle : Bundle {
+//    var imagebundle: Bundle {
 //        let path = Bundle.main.path(forResource: "YDNDUI_YDNDUI", ofType: "bundle")
 //        let bundle = Bundle(path: path!)!
 //        return bundle
@@ -27,10 +27,10 @@ import SwiftUI
 //                .scaledToFit()
 //        }
 //    }
-//}
+// }
 //
-//struct TestFeatureView_Previews: PreviewProvider {
+// struct TestFeatureView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        TestFeatureView()
 //    }
-//}
+// }

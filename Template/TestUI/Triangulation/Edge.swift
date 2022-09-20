@@ -21,10 +21,17 @@ extension Edge: Equatable {
 }
 
 extension Edge: Hashable {
-    var hashValue: Int {
+    func hash(into hasher: inout Hasher) {
         var seed = UInt(0)
         hash_combine(seed: &seed, value: UInt(bitPattern: vertex1.hashValue))
         hash_combine(seed: &seed, value: UInt(bitPattern: vertex2.hashValue))
-        return Int(bitPattern: seed)
+        let result = Int(bitPattern: seed)
+        hasher.combine(result)
     }
+    // var hashValue: Int {
+    //     var seed = UInt(0)
+    //     hash_combine(seed: &seed, value: UInt(bitPattern: vertex1.hashValue))
+    //     hash_combine(seed: &seed, value: UInt(bitPattern: vertex2.hashValue))
+    //     return Int(bitPattern: seed)
+    // }
 }

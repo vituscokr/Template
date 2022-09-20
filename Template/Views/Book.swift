@@ -8,9 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Book:ObservableObject {
-    
-    @Published var title : String = "책제목"
+class Book: ObservableObject {
+    @Published var title: String = "책제목"
     let id = UUID()
-    
 }

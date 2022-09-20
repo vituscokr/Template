@@ -8,26 +8,24 @@
 import Foundation
 import SwiftUI
 
-enum BadgesType :CaseIterable{
+enum BadgesType: CaseIterable {
     case pink
     case purple
     case green
     case yellow
     case gray
-    
 }
-struct Badge : ViewModifier {
-    var titleColor : Color
-    var backgroundColor : Color
+struct Badge: ViewModifier {
+    var titleColor: Color
+    var backgroundColor: Color
     init(_ type: BadgesType) {
-        switch(type) {
+        switch type {
         case .pink:
             titleColor = Color.mainPinkDark
             backgroundColor = Color.pinklight2
         case .purple:
             titleColor = Color.purple
             backgroundColor = Color.purpleLight
-            
         case .green:
             titleColor = Color.green
             backgroundColor = Color.greenLight

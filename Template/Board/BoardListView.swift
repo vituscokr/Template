@@ -10,7 +10,6 @@ import SwiftUI
 struct BoardListView: View {
     var body: some View {
         VStack {
-            
         }
     }
 }

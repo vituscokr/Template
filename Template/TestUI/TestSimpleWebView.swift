@@ -9,8 +9,7 @@ import SwiftUI
 import LSSLibrary
 
 struct TestSimpleWebView: View {
-    
-    @State var request : URLRequest?  = URLRequest(url: URL(string: "http://naver.com")!)
+    @State var request: URLRequest?  = URLRequest(url: URL(string: "http://naver.com")!)
     var body: some View {
         SimpleWebView(_request)
     }

@@ -9,14 +9,12 @@ import Foundation
 import Combine
 import LSSLibrary
 
-class ConfigModel : ObservableObject {
+class ConfigModel: ObservableObject {
     @Published var items: [Config] = [Config]()
-    private var cancellable : AnyCancellable?
-    
-    init(itemsPublisher : AnyPublisher<[Config], Never> = ConfigStorage.shared.items.eraseToAnyPublisher()) {
-
+    private var cancellable: AnyCancellable?
+    init(itemsPublisher: AnyPublisher<[Config], Never> = ConfigStorage.shared.items.eraseToAnyPublisher()) {
         cancellable = itemsPublisher.sink { items in
-            self.items = items 
+            self.items = items
         }
 
     }

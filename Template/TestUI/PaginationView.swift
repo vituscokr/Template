@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-// 참고 : https://sweetdev.tistory.com/719
+// 참고: https://sweetdev.tistory.com/719
 
 //
 //https://sweetdev.tistory.com/719
@@ -23,114 +23,88 @@ import SwiftUI
 //                        .tabViewStyle(PageTabViewStyle())
 //                    }
 //                }
-
-
-
-
-struct PageData : Identifiable {
+struct PageData: Identifiable {
     var id = UUID()
-    var value : Int
+    var value: Int
 }
-
-
-class PagenationModel<T:Identifiable> : ObservableObject {
+class PagenationModel<T: Identifiable>: ObservableObject {
     @Published var items  = [T]()
     @Published var currentIndex: Int = 0
-    
     init() {
         items = [T]()
         currentIndex = 0
     }
-    
     init(items: [T]) {
         self.items = items
-        
     }
-    
 }
-
-
 struct PageView<T>: View {
-    var item : T
-    var title : String {
+    var item: T
+    var title: String {
         if item is PageData {
             guard let item = item as? PageData else {
                 return ""
             }
             return String(item.value  )
-        }else {
+       } else {
             return ""
         }
     }
     var body: some View {
-        VStack (spacing:0) {
+        VStack(spacing: 0) {
             Text(title)
         }
     }
 }
-
-//struct PageView_Previews: PreviewProvider {
+// struct PageView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        PageView<PageData>(item: PageData(value: 1))
 //    }
-//}
-
-
+// }
 struct PaginationView: View {
-    
-    @StateObject var model : PagenationModel<PageData> = PagenationModel<PageData>()
-    
+    @StateObject var model: PagenationModel<PageData> = PagenationModel<PageData>()
     @State var currentIndex: Int = 0
     var screenWidth: CGFloat {
         return UIScreen.main.bounds.width
     }
-    
     var body: some View {
-        VStack (spacing:0) {
-            ScrollView([.horizontal] , showsIndicators: false) {
+        VStack(spacing: 0) {
+            ScrollView([.horizontal], showsIndicators: false) {
                 if model.items.count > 0 {
                     HStack {
-                        TabView (selection: $currentIndex){
-                            ForEach(0..<model.items.count  , id: \.self ) { index in
-                                
-                                PageView<PageData>(item:model.items[index])
+                        TabView(selection: $currentIndex) {
+                            ForEach(0..<model.items.count, id: \.self ) { index in
+                                PageView<PageData>(item: model.items[index])
                             }
                         }
                         .frame(width: screenWidth)
                         .tabViewStyle(PageTabViewStyle() )
                     }
-                    
                     .onAppear {
                         UIPageControl.appearance().currentPageIndicatorTintColor = .black
                         UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
                     }
-                    
                 }
             }
             .onAppear {
-                
-                //더미 데이타
+                // 더미 데이타
                 model.items.append(PageData(value: 1))
                 model.items.append(PageData(value: 2))
                 model.items.append(PageData(value: 3))
         }
-            
             HStack {
                 if model.items.count > 0 {
-                    ForEach(0..<model.items.count , id:\.self) { index   in
-                        
+                    ForEach(0..<model.items.count, id: \.self) { index in
                         Circle()
-                            .foregroundColor(currentIndex == index ? Color.red : Color.blue )
+                            .foregroundColor(currentIndex == index ? Color.red: Color.blue )
                             .frame(width: 5, height: 5, alignment: .center)
                     }
                 }
             }
         }
-        .onChange(of: currentIndex) { newValue in
+        .onChange(of: currentIndex) { _ in
             print(currentIndex)
         }
-        
-        
     }
 }
 

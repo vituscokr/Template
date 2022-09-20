@@ -8,10 +8,7 @@
 import WidgetKit
 import SwiftUI
 
-
-
 let snapshotEntry = WidgetContent(
-    
     name: "iOS Concurrency with GCD and Operations",
     cardViewSubtitle: "iOS & Swift",
     descripitonPlainText: """
@@ -22,16 +19,12 @@ let snapshotEntry = WidgetContent(
     releaseAtDateTimeString: "Jun 23 2020 • Video Course (3 hrs, 21 mins)")
 
 struct Provider: IntentTimelineProvider {
-
-
-    
-    //처음 렌더링시 레이아웃은 표시되지만 내용은 가려진 상태로 표시됩니다.
-    //해당 메서드는 동기 호출이기 때문에 해당 메서드에서 네트워크 다운로드나 복잡한 계산 수행은 마세요.
+    // 처음 렌더링시 레이아웃은 표시되지만 내용은 가려진 상태로 표시됩니다.
+    // 해당 메서드는 동기 호출이기 때문에 해당 메서드에서 네트워크 다운로드나 복잡한 계산 수행은 마세요.
     func placeholder(in context: Context) -> WidgetContent {
         snapshotEntry
     }
-
-    //위젯의 스냅샷 ( 위젯갤러리에서 표시 , 데이터를 기다리는 상태에 표시) 
+    // 위젯의 스냅샷 ( 위젯갤러리에서 표시 , 데이터를 기다리는 상태에 표시)
     public func getSnapshot(
       for configuration: TimelineIntervalIntent,
       in context: Context,
@@ -62,7 +55,6 @@ struct Provider: IntentTimelineProvider {
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
-    
     func readContents() -> [Entry] {
         var contents: [WidgetContent] = []
         let archiveURL = FileManager.sharedContainerURL().appendingPathComponent("contents.json")
@@ -77,18 +69,13 @@ struct Provider: IntentTimelineProvider {
         return  contents
     }
 }
-
-
-
-
-
 /*
 struct WidgetContent: TimelineEntry {
     let date: Date
 }
  */
 
-struct MyWidgetEntryView : View {
+struct MyWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
@@ -98,11 +85,9 @@ struct MyWidgetEntryView : View {
 
 @main
 struct MyWidget: Widget {
-    
     private let kind: String = "MyWidget"
 
     public var body: some WidgetConfiguration {
-        
         IntentConfiguration(kind: kind, intent: TimelineIntervalIntent.self, provider: Provider()) { entry in
             EntryView(model: entry)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
@@ -116,7 +101,7 @@ struct MyWidget: Widget {
 //        }
         .configurationDisplayName("이것은 위젯의 이름입니다.")
         .description("이것은 위젯의 설명입니다.")
-        //.supportedFamilies([.systemMedium]) //중간 사이즈만 가능하게 할경우
+        // .supportedFamilies([.systemMedium]) //중간 사이즈만 가능하게 할경우
     }
 }
 

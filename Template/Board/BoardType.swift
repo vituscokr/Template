@@ -11,10 +11,8 @@ enum BoardType {
     case notice
     case faq
     case notification
-    
-    
-    var title :String {
-        switch(self) {
+    var title: String {
+        switch self {
         case .notice:
             return "공지사항"
         case .faq:
@@ -23,6 +21,4 @@ enum BoardType {
             return "알림"
         }
     }
-    
-    
 }

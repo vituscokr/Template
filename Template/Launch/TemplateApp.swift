@@ -13,13 +13,12 @@ struct TemplateApp: App {
     let persistenceController = PersistenceController.shared
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @Environment(\.scenePhase) var scenePhase
-    
     var body: some Scene {
         WindowGroup {
             LaunchView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onChange(of: scenePhase) { phase in
-                    switch(phase) {
+                    switch phase {
                     case .active:
                         Debug.log("active")
                     case .inactive:

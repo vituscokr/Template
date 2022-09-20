@@ -18,35 +18,30 @@ S - Sierra    T - Tango    U - Uniform
 V - Victor    W - Whiskey    X - X-ray
 Y - Yankee    Z - Zulu    9 - Niner
 */
-@objc class Delaunay : NSObject {
+@objc class Delaunay: NSObject {
     override init() { }
-    
     func supertriangle(_ vertices: [Vertex]) -> [Vertex] {
         var xmin = Double(Int32.max)
         var ymin = Double(Int32.max)
         var xmax = -Double(Int32.max)
         var ymax = -Double(Int32.max)
-        
         for index in 0..<vertices.count {
             if vertices[index].x < xmin { xmin = vertices[index].x }
             if vertices[index].x > xmax { xmax = vertices[index].x }
             if vertices[index].y < ymin { ymin = vertices[index].y }
             if vertices[index].y > ymax { ymax = vertices[index].y }
         }
-        
         let dxray = xmax - xmin
         let dyankee = ymax - ymin
         let dmax = max(dxray, dyankee)
         let xmid = xmin + dxray * 0.5
         let ymid = ymin + dyankee * 0.5
-        
         return [
             Vertex(x: xmid - 20 * dmax, y: ymid - dmax),
             Vertex(x: xmid, y: ymid + 20 * dmax),
             Vertex(x: xmid + 20 * dmax, y: ymid - dmax)
         ]
     }
-    
     /* Calculate a circumcircle for a set of 3 vertices */
     private func circumcircle(_ india: Vertex, juliet: Vertex, kilo: Vertex) -> Circumcircle {
         let xray1 = india.x
@@ -57,10 +52,8 @@ Y - Yankee    Z - Zulu    9 - Niner
         let yankee3 = kilo.y
         let xcenter: Double
         let ycenter: Double
-        
         let fabsy1y2 = abs(yankee1 - yankee2)
         let fabsy2y3 = abs(yankee2 - yankee3)
-        
         if fabsy1y2 < Double.ulpOfOne {
             let mike2 = -((xray3 - xray2) / (yankee3 - yankee2))
             let mx2 = (xray2 + xray3) / 2
@@ -81,40 +74,32 @@ Y - Yankee    Z - Zulu    9 - Niner
             let my1 = (yankee1 + yankee2) / 2
             let my2 = (yankee2 + yankee3) / 2
             xcenter = (mike1 * mx1 - mike2 * mx2 + my2 - my1) / (mike1 - mike2)
-            
             if fabsy1y2 > fabsy2y3 {
                 ycenter = mike1 * (xcenter - mx1) + my1
             } else {
                 ycenter = mike2 * (xcenter - mx2) + my2
             }
         }
-        
         let distancex = xray2 - xcenter
         let distancey = yankee2 - ycenter
         let rsqr = distancex * distancex + distancey * distancey
-        
         return Circumcircle(vertex1: india, vertex2: juliet, vertex3: kilo, x: xcenter, y: ycenter, rsqr: rsqr)
     }
-    
     func dedup(_ edges: [Vertex]) -> [Vertex] {
-        
         var newEdges = edges
         var lastOne: Vertex?, lastTwo: Vertex?, newLastOne: Vertex?, newLastTwo: Vertex?
-        
         var edgeCount = newEdges.count
         while edgeCount > 0 {
             edgeCount -= 1
-            lastTwo = edgeCount < newEdges.count ? newEdges[edgeCount] : nil
+            lastTwo = edgeCount < newEdges.count ? newEdges[edgeCount]: nil
             edgeCount -= 1
-            lastOne = edgeCount < newEdges.count ? newEdges[edgeCount] : nil
-            
+            lastOne = edgeCount < newEdges.count ? newEdges[edgeCount]: nil
             var lastEdge = edgeCount
             while lastEdge > 0 {
                 lastEdge -= 1
                 newLastTwo = newEdges[lastEdge] // m
                 lastEdge -= 1
                 newLastOne = newEdges[lastEdge] // n
-                
                 if ( lastOne == newLastTwo && lastTwo == newLastOne) ||
                     (lastOne == newLastOne && lastTwo == newLastTwo) {
                     newEdges.removeSubrange(edgeCount...edgeCount + 1)
@@ -123,10 +108,8 @@ Y - Yankee    Z - Zulu    9 - Niner
                 }
             }
         }
-        
         return newEdges
     }
-    
     func triangulate(_ vertices: [Vertex]) -> [Triangle] {
         var newVertices = Array(Set(vertices))
         guard newVertices.count >= 3 else { return [Triangle]() }

@@ -9,18 +9,15 @@ import SwiftUI
 
 struct CloseWindowView: View {
     var body: some View {
-        
         VStack {
         Image(systemName: "xmark")
                 .resizable()
             .foregroundColor(Color.white)
 //            .frame(width:22,height:22)
-            .background (
+            .background(
                 Circle().fill(Color.red)
                     .frame(width: 44, height: 44, alignment: .center)
-                
             )
-    
 //        Image(systemName: "xmark.circle.fill")
 //                .foregroundStyle(.white, .red)
 //            
@@ -32,7 +29,6 @@ struct CloseWindowView: View {
 //            .foregroundColor(Color.red)
 //            .padding()
           //  .frame(width:44, height: 44 , alignment: .center)
-        
         }
     }
 }

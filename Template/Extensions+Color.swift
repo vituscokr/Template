@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension Color {
-    //Sample
-    //static let graydark4 = Color(hexString: "#202224")
+    // Sample
+    // static let graydark4 = Color(hexString: "#202224")
     static let graydark4 = Color(red: 0.127, green: 0.132, blue: 0.142)
     static let graydark3 = Color(red: 0.196, green: 0.22, blue: 0.227)
     static let darkgray2 = Color(red: 0.319, green: 0.338, blue: 0.367)
@@ -59,5 +59,3 @@ extension Color {
  yellow
  yellowlight 
  */
-
-

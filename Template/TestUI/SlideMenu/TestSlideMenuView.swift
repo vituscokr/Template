@@ -7,42 +7,33 @@
 
 import SwiftUI
 
-//참고 : https://github.com/globulus/swiftui-side-menu/blob/main/Sources/SwiftUISideMenu/SwiftUISideMenu.swift
-public struct SlideMenu<MenuContent: View> : ViewModifier {
-    
+// 참고: https://github.com/globulus/swiftui-side-menu/blob/main/Sources/SwiftUISideMenu/SwiftUISideMenu.swift
+public struct SlideMenu<MenuContent: View>: ViewModifier {
     @Binding var isShowing: Bool
     private let menuContent: () -> MenuContent
-    
     public init(isShowing: Binding<Bool>,
                 @ViewBuilder menuContent: @escaping () -> MenuContent) {
         _isShowing = isShowing
         self.menuContent = menuContent
     }
-    
-    public func body(content:Content) -> some View {
-        
+    public func body(content: Content) -> some View {
         let drag = DragGesture().onEnded { event in
-            
             if event.location.x < 200 && abs(event.translation.height) < 50 && abs(event.translation.width) > 50 {
                 withAnimation {
                     self.isShowing = event.translation.width > 0
                 }
             }
         }
-        
-        
         return GeometryReader { geometry in
-            
-            ZStack (alignment: .leading){
+            ZStack(alignment: .leading) {
                 content
                     .disabled(isShowing)
                     .frame(width: geometry.size.width, height: geometry.size.height)
-                    .offset(x: self.isShowing ? geometry.size.width / 2 : 0 )
-                
+                    .offset(x: self.isShowing ? geometry.size.width / 2: 0 )
                 menuContent()
                     .frame(width: geometry.size.width / 2 )
                     .transition(.move(edge: .leading))
-                    .offset(x: self.isShowing ? 0 : -geometry.size.width / 2 )
+                    .offset(x: self.isShowing ? 0: -geometry.size.width / 2 )
             }.gesture(drag)
         }
     }
@@ -51,23 +42,18 @@ public struct SlideMenu<MenuContent: View> : ViewModifier {
 public extension View {
     func slideMenu<MenuContent: View>(
         isShowing: Binding<Bool>,
-        @ViewBuilder menuContent : @escaping () -> MenuContent
+        @ViewBuilder menuContent: @escaping () -> MenuContent
     ) -> some View {
         self.modifier(SlideMenu(isShowing: isShowing, menuContent: menuContent))
     }
 }
-
-
-
-
 struct TestSlideMenuView: View {
-    
     @State private var showSlideMenu: Bool = false
     var body: some View {
         NavigationView {
             VStack {
                 List(1..<6) { index in
-                    Text("Item : \(index)")
+                    Text("Item: \(index)")
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -83,34 +69,28 @@ struct TestSlideMenuView: View {
                 })
             ))
             .navigationBarBackButtonHidden(true)
-            
-            
-            
         }
         .slideMenu(isShowing: $showSlideMenu) {
-            
-            VStack (alignment: .leading) {
-                Button(action: {
+            VStack(alignment: .leading) {
+                Button {
                     self.showSlideMenu = false
-                }) {
+                } label: {
                     HStack {
                         Image(systemName: "xmark")
                             .foregroundColor(.green)
                         Text("Close")
                             .foregroundColor(Color.green)
                     }
-                    
                 }
                 Spacer()
             }
-            .frame(maxWidth:.infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .leading)
             .background(Color.white)
-            //.edgesIgnoringSafeArea()
+            // .edgesIgnoringSafeArea()
         }
         .navigationBarHidden(true)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden(true)
-        
     }
 }
 

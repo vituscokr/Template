@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-//https://betterprogramming.pub/wheel-picker-view-in-swiftui-6de7077b4791
+// https://betterprogramming.pub/wheel-picker-view-in-swiftui-6de7077b4791
 
-
-struct MyVal : Equatable {
+struct MyVal: Equatable {
     let id = UUID()
-    let val : String
-    
+    let val: String
 }
 
 enum Direction {
@@ -21,17 +19,13 @@ enum Direction {
     case right
 }
 
-struct WheelView : View {
-    @State var radius : Double  = 150
+struct WheelView: View {
+    @State var radius: Double  = 150
     @State var direction  = Direction.left
     @State var chosenIndex = 0
-    
-    @Binding var degree : Double
-    
-    let array : [MyVal]
-
-    let circleSize : Double
-    
+    @Binding var degree: Double
+    let array: [MyVal]
+    let circleSize: Double
     var body: some View {
         ZStack {
             let anglePerCount = Double.pi * 2.0 / Double(array.count)
@@ -46,14 +40,12 @@ struct WheelView : View {
                 }
             // MARK: WHEEL STACK - BEGINNING
             ZStack {
-                Circle().fill(EllipticalGradient(colors: [Color.orange,Color.red]))
+                Circle().fill(EllipticalGradient(colors: [Color.orange, Color.red]))
                     .hueRotation(Angle(degrees: degree))
-
-                ForEach(0 ..< array.count) { index in
+                ForEach(0..<Int(array.count), id: \.self) { index in
                     let angle = Double(index) * anglePerCount
                     let xOffset = CGFloat(radius * cos(angle))
                     let yOffset = CGFloat(radius * sin(angle))
-                    
                     ZStack {
                         Rectangle()
                                 .frame(width: 100, height: 100, alignment: .center)
@@ -62,19 +54,18 @@ struct WheelView : View {
                     }
                     .rotationEffect(Angle(degrees: -degree))
                     .offset(x: xOffset, y: yOffset )
-                    .font(Font.system(chosenIndex == index ? .title : .body, design: .monospaced))
+                    .font(Font.system(chosenIndex == index ? .title: .body, design: .monospaced))
                 }
             }
             .rotationEffect(Angle(degrees: degree))
             .gesture(drag)
-            .onAppear() {
+            .onAppear {
                 radius = circleSize/2 - 30 // 30 is for padding
             }
             // MARK: WHEEL STACK - END
         }
         .frame(width: circleSize, height: circleSize)
     }
-    
     func moveWheel() {
         withAnimation(.spring()) {
             if direction == .left {
@@ -98,7 +89,7 @@ struct WheelView : View {
 
 struct WheelPickerView: View {
     @State var degree = 90.0
-    let array : [MyVal] =  [MyVal(val: "0"),
+    let array: [MyVal] =  [MyVal(val: "0"),
                             MyVal(val: "1"),
                             MyVal(val: "2"),
                             MyVal(val: "3"),
@@ -108,16 +99,13 @@ struct WheelPickerView: View {
                             MyVal(val: "8"),
                             MyVal(val: "9"),
                             MyVal(val: "10")
-    
     ]
-
     var body: some View {
-        ZStack (alignment: .center){
+        ZStack(alignment: .center) {
             Color.orange.opacity(0.4).ignoresSafeArea()
                 .hueRotation(Angle(degrees: degree))
-            
             WheelView(degree: $degree, array: array, circleSize: 400)
-                .offset(y:350)
+                .offset(y: 350)
                 .shadow(color: .white, radius: 4, x: 0, y: 0)
         }
     }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookView: View {
-    //@ObservedObject var book : Book
+    // @ObservedObject var book: Book
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }

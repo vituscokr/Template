@@ -9,13 +9,8 @@ import Foundation
 import SwiftUI
 import SwiftyJSON
 
-
-class BoardModel : ObservableObject {
-    
-    @Published var item : [JSON] = [JSON]() 
-    
+class BoardModel: ObservableObject {
+    @Published var item: [JSON] = [JSON]()
     public init() {
-        
     }
-    
 }

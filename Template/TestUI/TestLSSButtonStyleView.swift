@@ -10,17 +10,14 @@ import LSSLibrary
 
 struct TestLSSButtonStyleView: View {
     var body: some View {
-        Button(action:{
-            
+        Button {
             Debug.log("hi")
-        }){
+        } label: {
             EmptyView()
         }
         .buttonStyle(LSSButtonStyle(change: { state in
-            
             Text("hi")
-                .foregroundColor(state ? Color.red : Color.blue)
-            
+                .foregroundColor(state ? Color.red: Color.blue)
         }))
     }
 }

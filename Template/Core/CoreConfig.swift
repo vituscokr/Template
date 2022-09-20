@@ -7,15 +7,11 @@
 
 import Foundation
 import CoreData
-
-
-
-
-//class CoreConfig {
+// class CoreConfig {
 //    static var shared = CoreConfig()
 //    
 //    let persistenceController = PersistenceController.shared
-//    let viewContext :NSManagedObjectContext?
+//    let viewContext:NSManagedObjectContext?
 //    
 //
 //    
@@ -25,11 +21,11 @@ import CoreData
 //        self.viewContext =  persistenceController.container.viewContext
 //    }
 //
-//    public func read(_ key : ConfigKey  ) -> String  {
+//    public func read(_ key: ConfigKey  ) -> String  {
 //        @FetchRequest(
 //            entity: Config.entity(),
-//            predicate : NSPredicate(format: "key == %0" , key)
-//        ) var configs : NSFetchRequest<Config>
+//            predicate: NSPredicate(format: "key == %0" , key)
+//        ) var configs: NSFetchRequest<Config>
 //
 //        
 //        
@@ -39,14 +35,14 @@ import CoreData
 //    
 //    public func save(key: ConfigKey, value: String) {
 //        
-////        Config.key = key.rawValue
-////        Config.value = value
-////
-////        saveContext()
+//        Config.key = key.rawValue
+//        Config.value = value
+//
+//        saveContext()
 //        
 //    }
 //    
 //    func saveContext() {
 //        
 //    }
-//}
+// }
