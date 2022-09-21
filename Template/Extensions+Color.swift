@@ -33,6 +33,10 @@ extension Color {
     static let yellowdark = Color(red: 0.844, green: 0.471, blue: 0.032)
     static let yellow = Color(red: 1, green: 0.858, blue: 0.354)
     static let yellowlight = Color(red: 1, green: 0.965, blue: 0.839)
+    // new
+    static let blackLight = Color(hexString: "#2f3945")
+    static let grayLighter = Color(hexString: "#DADFE8")
+    static let primary = Color(hexString: "#2F8CE4")
 }
 
 /*

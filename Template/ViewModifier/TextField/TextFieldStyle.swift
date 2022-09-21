@@ -23,14 +23,23 @@ enum FieldState {
     case disable
 }
 
+struct InputColors {
+    var placeholderColor: Color
+    var accentColor: Color
+    var textColor: Color
+    var backgroundColor: Color
+    var textErrorColor: Color
+    var lineActiveColor: Color
+    var lineNormalCaolor: Color
+    var lineErrorColor: Color
+    var lineDisableColor: Color
+}
 struct LineStandardStyle: TextFieldStyle {
     @Binding var state: FieldState
     @Binding var text: String
     var placeholder: String
     @State var textField: UITextField?
-    let placeholderColor: Color = .green
-    let accentColor: Color = .red
-    let textColor: Color = .blue
+    var colors: InputColors
     var showClear: Bool {
         switch state {
         case .disable, .normal, .active, .error:
@@ -46,16 +55,53 @@ struct LineStandardStyle: TextFieldStyle {
             return false
         }
     }
+    func lineSection(state: FieldState) -> some View {
+        ZStack {
+            if state == .disable || state == .normal {
+                colors.lineNormalCaolor
+            } else if state == .active || state == .input {
+                colors.lineActiveColor
+            } else if state == .error {
+                colors.lineErrorColor
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: 1)
+    }
+    func clearSection() -> some View {
+        HStack(spacing: 0) {
+            Spacer()
+            Button {
+                text = ""
+            }  label: {
+                Image(systemName: "xmark.circle")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 20, height: 20)
+            }
+            .frame(width: 40, height: 40, alignment: .trailing)
+        }
+    }
+    func placeholderSection() -> some View {
+        VStack(alignment: .leading, spacing: 0) {
+            HStack {
+                Text(placeholder)
+                    .foregroundColor(colors.placeholderColor)
+                Spacer()
+            }
+        }
+    }
     func _body(configuration: TextField<Self._Label>) -> some View {
         ZStack {
+            colors.backgroundColor
             VStack(spacing: 0) {
                 if state == .disable {
                     configuration
                         .disabled(true)
+                        .frame(height: 43)
                 } else {
                     configuration
-                        .accentColor(accentColor)
-                        .foregroundColor(textColor)
+                        .accentColor(colors.accentColor)
+                        .foregroundColor(colors.textColor)
                         .onChange(of: text) { _ in
                             state =  text.isEmpty ? .active : .input
                         }
@@ -63,32 +109,16 @@ struct LineStandardStyle: TextFieldStyle {
                         .introspectTextField(customize: { textfield in
                             self.textField = textfield
                         })
+                        .frame(height: 43)
                 }
-                Color.gray
-                    .frame(maxWidth: .infinity, maxHeight: 1)
+                lineSection(state: state)
             }
             .opacity(state == .disable ? 0.5 : 1)
+            .frame(height: 44)
             if showPlaceholder {
-                VStack(alignment: .leading, spacing: 0) {
-                    HStack {
-                        Text(placeholder)
-                            .foregroundColor(placeholderColor)
-                        Spacer()
-                    }
-                }
+                placeholderSection()
             } else if showClear {
-                HStack(spacing: 0) {
-                    Spacer()
-                    Button {
-                        text = ""
-                    }  label: {
-                        Image(systemName: "xmark.circle")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 20, height: 20)
-                    }
-                    .frame(width: 40, height: 40, alignment: .trailing)
-                }
+                clearSection()
             }
         }
         .frame(height: 44)
